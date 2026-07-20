@@ -1,9 +1,12 @@
+import LeafletTest from "./components/LeafletTest"
 
 
 function App() {
 
   return (
-    <div>Hello, stadium!</div>
+    <>
+      <LeafletTest />
+    </>
   )
 }
 

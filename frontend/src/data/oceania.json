@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oc-001",
+    "stadium": "Accor Stadium",
+    "latitude": -33.8472,
+    "longitude": 151.0634
+  },
+  {
+    "id": "oc-002",
+    "stadium": "Suncorp Stadium",
+    "latitude": -27.4653,
+    "longitude": 153.0092
+  },
+  {
+    "id": "oc-003",
+    "stadium": "AAMI Park",
+    "latitude": -37.8249,
+    "longitude": 144.9834
+  },
+  {
+    "id": "oc-004",
+    "stadium": "Sky Stadium",
+    "latitude": -41.2731,
+    "longitude": 174.7858
+  },
+  {
+    "id": "oc-005",
+    "stadium": "Eden Park",
+    "latitude": -36.8753,
+    "longitude": 174.7444
+  },
+  {
+    "id": "oc-006",
+    "stadium": "Optus Stadium",
+    "latitude": -31.9511,
+    "longitude": 115.8936
+  },
+  {
+    "id": "oc-007",
+    "stadium": "Allianz Stadium",
+    "latitude": -33.8892,
+    "longitude": 151.2250
+  },
+  {
+    "id": "oc-008",
+    "stadium": "HBF Park",
+    "latitude": -31.9442,
+    "longitude": 115.8692
+  },
+  {
+    "id": "oc-009",
+    "stadium": "North Harbour Stadium",
+    "latitude": -36.7328,
+    "longitude": 174.7042
+  },
+  {
+    "id": "oc-010",
+    "stadium": "Lawson Tama Stadium",
+    "latitude": -9.4356,
+    "longitude": 159.9575
+  }
+]

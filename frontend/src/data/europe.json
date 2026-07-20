@@ -1,0 +1,152 @@
+[
+  {
+    "id": "eu-001",
+    "stadium": "Wembley Stadium",
+    "latitude": 51.5560,
+    "longitude": -0.2797
+  },
+  {
+    "id": "eu-002",
+    "stadium": "Old Trafford",
+    "latitude": 53.4631,
+    "longitude": -2.2914
+  },
+  {
+    "id": "eu-003",
+    "stadium": "Anfield",
+    "latitude": 53.4308,
+    "longitude": -2.9608
+  },
+  {
+    "id": "eu-004",
+    "stadium": "Tottenham Hotspur Stadium",
+    "latitude": 51.6044,
+    "longitude": -0.0664
+  },
+  {
+    "id": "eu-005",
+    "stadium": "Etihad Stadium",
+    "latitude": 53.4831,
+    "longitude": -2.2004
+  },
+  {
+    "id": "eu-006",
+    "stadium": "Emirates Stadium",
+    "latitude": 51.5549,
+    "longitude": -0.1084
+  },
+  {
+    "id": "eu-007",
+    "stadium": "Stamford Bridge",
+    "latitude": 51.4817,
+    "longitude": -0.1910
+  },
+  {
+    "id": "eu-008",
+    "stadium": "Spotify Camp Nou",
+    "latitude": 41.3809,
+    "longitude": 2.1194
+  },
+  {
+    "id": "eu-009",
+    "stadium": "Santiago Bernabeu Stadium",
+    "latitude": 40.4531,
+    "longitude": -3.6883
+  },
+  {
+    "id": "eu-010",
+    "stadium": "Metropolitano Stadium",
+    "latitude": 40.4362,
+    "longitude": -3.5996
+  },
+  {
+    "id": "eu-011",
+    "stadium": "Stadio Giuseppe Meazza",
+    "latitude": 45.4781,
+    "longitude": 9.1240
+  },
+  {
+    "id": "eu-012",
+    "stadium": "Stadio Olimpico",
+    "latitude": 41.9341,
+    "longitude": 12.4547
+  },
+  {
+    "id": "eu-013",
+    "stadium": "Stadio Diego Armando Maradona",
+    "latitude": 40.8279,
+    "longitude": 14.1930
+  },
+  {
+    "id": "eu-014",
+    "stadium": "Allianz Arena",
+    "latitude": 48.2186,
+    "longitude": 11.6247
+  },
+  {
+    "id": "eu-015",
+    "stadium": "Signal Iduna Park",
+    "latitude": 51.4926,
+    "longitude": 7.4519
+  },
+  {
+    "id": "eu-016",
+    "stadium": "Olympiastadion Berlin",
+    "latitude": 52.5147,
+    "longitude": 13.2394
+  },
+  {
+    "id": "eu-017",
+    "stadium": "Parc des Princes",
+    "latitude": 48.8414,
+    "longitude": 2.2530
+  },
+  {
+    "id": "eu-018",
+    "stadium": "Stade de France",
+    "latitude": 48.9244,
+    "longitude": 2.3601
+  },
+  {
+    "id": "eu-019",
+    "stadium": "Orange Velodrome",
+    "latitude": 43.2699,
+    "longitude": 5.3959
+  },
+  {
+    "id": "eu-020",
+    "stadium": "Johan Cruyff ArenA",
+    "latitude": 52.3144,
+    "longitude": 4.9419
+  },
+  {
+    "id": "eu-021",
+    "stadium": "Estadio da Luz",
+    "latitude": 38.7527,
+    "longitude": -9.1847
+  },
+  {
+    "id": "eu-022",
+    "stadium": "Estadio do Dragao",
+    "latitude": 41.1618,
+    "longitude": -8.5836
+  },
+  {
+    "id": "eu-023",
+    "stadium": "Celtic Park",
+    "latitude": 55.8497,
+    "longitude": -4.2055
+  },
+  {
+    "id": "eu-024",
+    "stadium": "Ibrox Stadium",
+    "latitude": 55.8532,
+    "longitude": -4.3093
+  },
+  {
+    "id": "eu-025",
+    "stadium": "Ataturk Olympic Stadium",
+    "latitude": 41.0744,
+    "longitude": 28.7656
+  }
+]
