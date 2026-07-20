@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 
 import LeafletTest from "@components/LeafletTest"
 import StadiumSelector from "@components/StadiumSelector"
+import Test from "@components/Test"
+import TypeArea from "@components/TypeArea"
 
 
 import europeStadiums from "@data/europe.json"
@@ -10,8 +12,6 @@ import africaStadiums from "@data/africa.json"
 import northcentralamericaStadiums from "@data/northcentralamerica.json"
 import oceaniaStadiums from "@data/oceania.json"
 import southamericaStadiums from "@data/southamerica.json"
-import Test from "./components/Test"
-import TypeArea from "./components/TypeArea"
 
 const STADIUMS = [
   { id: "eu", data: europeStadiums },
@@ -30,7 +30,7 @@ const App = () => {
 
   useEffect(() => {
     const found = europeStadiums.find(s => s.stadium === stadium);
-    console.log(found)
+    //console.log(found)
 
     if (found)
     {
@@ -38,7 +38,7 @@ const App = () => {
       setLongitude(found.longitude);
       
     }
-    console.log(latitude, longitude);
+    //console.log(latitude, longitude);
   }, [stadium]);
 
   //console.log(latitude, longitude);

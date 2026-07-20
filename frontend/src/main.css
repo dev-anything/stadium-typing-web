@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-ibm-plex-mono: "Pretendard", monospace;
+  --font-ibm-plex-mono: "IBM Plex Mono", monospace;
+  --font-pretendard: "Pretendard";
 }
 
 @layer components {
