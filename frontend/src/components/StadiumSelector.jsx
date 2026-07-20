@@ -1,27 +1,15 @@
-import europeStadiums from "@data/europe.json"
+import europeStadiums from "@data/europe.json";
 
 const STADIUMS = [
   { id: "eu", data: europeStadiums},
   { id: "eu-002", label: "Old Trafford"}
 ]
 
-const EUROPE = europeStadiums
+const EUROPE = europeStadiums;
 
 const StadiumSelector = ( { onChange } ) => {
   return (
     <div>
-      {/*{STADIUMS.map((stadium) => {
-        return (
-          <button
-            key={stadium.id}
-            type="button"
-            onClick={() => onChange(stadium.id)}
-            className="px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300 hover:cursor-pointer"
-          >
-            {stadium.label}
-          </button>
-        )
-      })}*/}
       {EUROPE.map((stadium) => {
         return (
           <button
@@ -38,4 +26,4 @@ const StadiumSelector = ( { onChange } ) => {
   );
 }
 
-export default StadiumSelector
+export default StadiumSelector;
