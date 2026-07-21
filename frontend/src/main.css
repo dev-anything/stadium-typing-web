@@ -6,21 +6,9 @@
 }
 
 @layer components {
-  /* Home 히어로 섹션 배경 그라데이션 (Home.jsx에서 사용) */
-  .bg-hero-gradient {
-    background:
-      radial-gradient(60% 60% at 50% 0%, rgba(16, 185, 129, 0.10) 0%, rgba(16, 185, 129, 0) 60%),
-      linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
-  }
+
 }
 
 @layer utilities {
-  /* 지역 카드 이모지에 사용할 둥둥 떠다니는 애니메이션 (Home.jsx에서 사용) */
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-6px); }
-  }
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
+
 }

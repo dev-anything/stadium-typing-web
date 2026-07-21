@@ -66,36 +66,34 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ onChange }) => {
-  const { current, next, isFinished, progress } = useShuffle({ items: eplStadiumList });
-  const target = current.stadium;
-
-
-
+const TypeArea = ({ stadiumName, onComplete }) => {
+  //console.log("TypeArea Com: ", stadiumName);
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
 
   useEffect(() => {
+    if (!stadiumName) return;
+
     setTyped('');
     inputRef.current?.focus();
-  }, []);
+  }, [stadiumName]);
+
+  //useEffect(() => {
+  //  onComplete(stadiumName);
+  //}, [stadiumName, onComplete]);
+
 
   useEffect(() => {
-    onChange(target);
-  }, [target, onChange]);
-
-
-  useEffect(() => {
-    if (typed === target)
+    if (typed === stadiumName)
     {
       const timer = setTimeout(() => {
         setTyped('');
-        next();
+        onComplete();
       });
       return () => clearTimeout(timer);
     }
-  }, [typed, target, next]);
+  }, [typed, stadiumName, onComplete]);
 
   const handleKeyDown = (e) => {
     const now = performance.now()
@@ -114,14 +112,14 @@ const TypeArea = ({ onChange }) => {
     if (e.code === 'Enter') {
       e.preventDefault()
       e.target.value = ''
-      setTyped((prev) => (prev.length >= target.length ? prev : prev + '\n'))
+      setTyped((prev) => (prev.length >= stadiumName.length ? prev : prev + '\n'))
       return
     }
 
     if (e.code === 'Tab') {
       e.preventDefault()
       e.target.value = ''
-      setTyped((prev) => (prev.length >= target.length ? prev : prev + '    '))
+      setTyped((prev) => (prev.length >= stadiumName.length ? prev : prev + '    '))
       return
     }
 
@@ -129,7 +127,7 @@ const TypeArea = ({ onChange }) => {
     if (char !== null) {
       e.preventDefault()
       e.target.value = ''
-      setTyped((prev) => (prev.length >= target.length ? prev : prev + char))
+      setTyped((prev) => (prev.length >= stadiumName.length ? prev : prev + char))
     }
   }
 
@@ -153,9 +151,9 @@ const TypeArea = ({ onChange }) => {
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
       />
-      <div className="font-ibm-plex-mono text-xs bg-gray-100 p-4 rounded w-1/2" onClick={() => onChange(target)}>
+      <div className="font-ibm-plex-mono text-xs bg-gray-100 p-4 rounded w-1/2">
         <span className="whitespace-pre relative flex flex-wrap">
-          {target.split('').map((char, i) => {
+          {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
             let className = "text-gray-400";
 
@@ -171,7 +169,7 @@ const TypeArea = ({ onChange }) => {
           })}
           {(() => {
             const cursorCol = typed.length
-            if (cursorCol < 0 || cursorCol > target.length) return null
+            if (cursorCol < 0 || cursorCol > stadiumName.length) return null
             //if (cursorAtLineEnd) return null
             return (
               <span
@@ -182,7 +180,6 @@ const TypeArea = ({ onChange }) => {
           })()}
         </span>
       </div>
-      <div>{progress}</div>
     </div>
   );
 }

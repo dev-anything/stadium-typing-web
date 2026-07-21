@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import shuffleJson from "../utils/shuffleJson";
+import shuffleJson from "@utils/shuffleJson";
 
 const useShuffle = ({ items }) => {
   const shuffled = useMemo(() => shuffleJson(items), [items]);

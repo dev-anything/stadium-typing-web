@@ -11,6 +11,7 @@ import eplStadiumList from "@data/epl.json";
 import { Route, Routes } from "react-router-dom";
 import Index from "@components/Index"
 import Stadium from "@components/Stadium"
+import Homepage from "@components/Homepage"
 
 
 
@@ -48,6 +49,7 @@ const App = () => {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/index" element={<Index />} />
+        <Route path="/homepage" element={<Homepage />} />
         <Route path="/play" element={<Stadium />} />
         
       </Routes>

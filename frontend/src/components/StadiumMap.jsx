@@ -3,11 +3,50 @@ import L from 'leaflet';
 import { useEffect } from "react";
 
 
+//const stadiumIcon = L.divIcon({
+//  html: `<div style="font-size: 28px;">⚽</div>`,
+//  className: '', // 기본 Leaflet 클래스(회색 배경 박스) 제거용, 비워두는 게 핵심
+//  iconSize: [32, 32],
+//  iconAnchor: [16, 32],
+//})
+
+//const stadiumIcon = L.divIcon({
+//  html: `
+//    <div style="
+//      display: flex;
+//      align-items: center;
+//      justify-content: center;
+//      width: 32px;
+//      height: 32px;
+//      background: #FFB454;
+//      border-radius: 50%;
+//      border: 2px solid #0B1F17;
+//      box-shadow: 0 0 12px rgba(255, 180, 84, 0.6);
+//      font-size: 16px;
+//    ">⚽</div>
+//  `,
+//  className: '',
+//  iconSize: [32, 32],
+//  iconAnchor: [16, 16],
+//})
+
 const stadiumIcon = L.divIcon({
-  html: `<div style="font-size: 28px;">⚽</div>`,
-  className: '', // 기본 Leaflet 클래스(회색 배경 박스) 제거용, 비워두는 게 핵심
-  iconSize: [32, 32],
-  iconAnchor: [16, 32],
+  html: `
+    <div style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background: #F4F5F0;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      font-size: 15px;
+    ">⚽</div>
+  `,
+  className: '',
+  iconSize: [30, 30],
+  iconAnchor: [15, 15],
 })
 
 const MapUpdater = ({ latitude, longitude }) => {
