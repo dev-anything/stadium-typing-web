@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 @theme {
   --font-ibm-plex-mono: "IBM Plex Mono", monospace;
   --font-pretendard: "Pretendard";
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
 @layer components {

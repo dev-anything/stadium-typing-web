@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import StadiumMap from "@components/StadiumMap";
 import TypeArea from "@components/TypeArea";
-
-import eplStadiumList from "@data/epl.json";
 import useShuffle from "@hooks/useShuffle";
 
-const Stadium = () => {
-  const { current, next, currentStage, stage } = useShuffle({ items: eplStadiumList });
-  if (!current) return null;
-  console.log("Stadium Com: ", current.stadium);
+import { allStadiums, stadiumsByLeague } from "@data";
+import { useParams } from "react-router-dom";
 
-  
+
+const Stadium = () => {
+  const { leagueInfo } = useParams();
+  const { current, next, currentStage, stage } = useShuffle({ items: stadiumsByLeague[leagueInfo] });
+
+  if (!current) return null;
 
   return (
     <>

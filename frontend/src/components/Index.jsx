@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import Stadium from "./Stadium";
+
 const heroWords = ["TYPE", "THE", "PITCH"];
 
 const routine = [
@@ -23,6 +26,17 @@ const stats = [
   { value: "45", label: "NATIONS" },
   { value: "6", label: "CONTINENTS" },
 ];
+
+const LEAGUE = [
+  { key: "epl", label: "Premier League" },
+  { key: "efl", label: "EFL Championship" },
+  { key: "laliga", label: "La Liga" },
+  { key: "bundesliga", label: "Bundesliga" },
+  { key: "seriea", label: "Serie A" },
+  { key: "ligue1", label: "Ligue 1" },
+  { key: "k1", label: "K League 1" },
+  { key: "k2", label: "K League 2" },
+]
 
 const Home = () => {
   let letterIndex = 0;
@@ -75,13 +89,13 @@ const Home = () => {
       `}</style>
 
       {/* 은은한 조명 하나만 남김 */}
-      <div className="pointer-events-none absolute left-1/2 top-[-15%] h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
+      <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
 
       <div className="relative">
         {/* 상단 바 */}
         <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-          <span className="font-display text-base tracking-wide">GROUND TYPE</span>
-          <span className="font-mono text-[10px] tracking-widest text-[#5C6F65]">
+          <span className="font-display text-base tracking-wide">STADIO TYPE</span>
+          <span className="font-ibm-plex-mono text-[10px] tracking-widest text-[#5C6F65]">
             WORLD TOUR
           </span>
         </header>
@@ -115,17 +129,32 @@ const Home = () => {
 
           <div className="mt-8 flex justify-center">
             <button className="font-display rounded-full bg-[#3CCB6F] px-7 py-2.5 text-sm font-semibold tracking-wide text-[#0B1F17] transition hover:bg-[#4fe083] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFB454]">
-              Kick Off
+              <Link to="/play">START TYPING</Link>
             </button>
           </div>
         </main>
+
+        <div>
+          {LEAGUE.map((league) => {
+            return (
+              <button
+                key={league.key}
+                type="button"
+                className="cursor-pointer"
+                onClick={() => console.log(league.label)}
+              >
+                <Link to={`/play/${league.key}`}>{league.label}</Link>
+              </button>
+            )
+          })}
+        </div>
 
         {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
         <section className="mx-auto max-w-4xl px-6 py-16">
           <div className="grid gap-10 sm:grid-cols-3">
             {routine.map((step) => (
               <div key={step.n}>
-                <span className="font-mono text-xs tracking-widest text-[#3CCB6F]">
+                <span className="font-ibm-plex-mono text-xs tracking-widest text-[#3CCB6F]">
                   {step.n}
                 </span>
                 <h3 className="font-display mt-2 text-base font-semibold">
@@ -140,24 +169,24 @@ const Home = () => {
         </section>
 
         {/* 통계 — 얇은 구분선만 사용 */}
-        <section className="border-t border-[#3CCB6F1a]">
+        {/*<section className="border-t border-[#3CCB6F1a]">
           <div className="mx-auto flex max-w-2xl justify-center gap-12 px-6 py-12 sm:gap-20">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <p className="font-mono text-2xl font-bold text-[#3CCB6F] sm:text-3xl">
+                <p className="font-ibm-plex-mono text-2xl font-bold text-[#3CCB6F] sm:text-3xl">
                   {s.value}
                 </p>
-                <p className="font-mono mt-1 text-[10px] tracking-[0.2em] text-[#5C6F65]">
+                <p className="font-ibm-plex-mono mt-1 text-[10px] tracking-[0.2em] text-[#5C6F65]">
                   {s.label}
                 </p>
               </div>
             ))}
           </div>
-        </section>
+        </section>*/}
 
         {/* 푸터 — 텍스트 한 줄 */}
         <footer className="mx-auto max-w-3xl px-6 py-10 text-center">
-          <p className="font-mono text-[10px] tracking-widest text-[#5C6F65]">
+          <p className="font-ibm-plex-mono text-[15px] tracking-widest text-[#5C6F65]">
             Made by dev_anything_
           </p>
         </footer>
