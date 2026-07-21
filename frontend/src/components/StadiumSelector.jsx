@@ -1,16 +1,14 @@
 import europeStadiums from "@data/europe.json";
+import allStadiums from "@data/main.json";
 
-const STADIUMS = [
-  { id: "eu", data: europeStadiums},
-  { id: "eu-002", label: "Old Trafford"}
-]
 
 const EUROPE = europeStadiums;
+const ALL = allStadiums;
 
 const StadiumSelector = ( { onChange } ) => {
   return (
     <div>
-      {EUROPE.map((stadium) => {
+      {ALL.map((stadium) => {
         return (
           <button
             key={stadium.id}

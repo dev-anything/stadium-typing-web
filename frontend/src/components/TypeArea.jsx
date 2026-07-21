@@ -65,11 +65,11 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = () => {
+const TypeArea = ({ onChange }) => {
   const { current, next, isFinished, progress } = useShuffle({ items: allStadiumList });
-  //console.log("current: ", current);
   const target = current.stadium;
-  console.log("This is: ", current.stadium);
+
+
 
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
@@ -79,6 +79,22 @@ const TypeArea = () => {
     setTyped('');
     inputRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    onChange(target);
+  }, [target, onChange]);
+
+
+  useEffect(() => {
+    if (typed === target)
+    {
+      const timer = setTimeout(() => {
+        setTyped('');
+        next();
+      });
+      return () => clearTimeout(timer);
+    }
+  }, [typed, target, next]);
 
   const handleKeyDown = (e) => {
     const now = performance.now()
@@ -136,11 +152,7 @@ const TypeArea = () => {
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
       />
-      <div className="font-ibm-plex-mono text-xs bg-gray-100 p-4 rounded w-1/2">
-        {/*<span className="w-8 text-right text-gray-400 select-none">
-          {current.stadium}
-          {console.log("In the: ", current.stadium)}
-        </span>*/}
+      <div className="font-ibm-plex-mono text-xs bg-gray-100 p-4 rounded w-1/2" onClick={() => onChange(target)}>
         <span className="whitespace-pre relative flex flex-wrap">
           {target.split('').map((char, i) => {
             const globalIdx = i;

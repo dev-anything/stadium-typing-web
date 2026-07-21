@@ -22,7 +22,7 @@ const MapUpdater = ({ latitude, longitude }) => {
   return null;
 }
 
-const LeafletTest = ( { latitude, longitude, stadiumName } ) => {
+const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
 
   if (latitude === undefined || longitude === undefined)
   {
@@ -31,9 +31,13 @@ const LeafletTest = ( { latitude, longitude, stadiumName } ) => {
 
   return (
     <MapContainer center={[latitude, longitude]} zoom={8} scrollWheelZoom={false} style={{ height: '500px', width: '100%' }}>
-      <TileLayer 
+      {/*<TileLayer 
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />*/}
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       />
       <MapUpdater latitude={latitude} longitude={longitude} />
       <Marker position={[latitude, longitude]} icon={stadiumIcon}>
@@ -44,4 +48,4 @@ const LeafletTest = ( { latitude, longitude, stadiumName } ) => {
 
 }
 
-export default LeafletTest;
+export default StadiumMap;
