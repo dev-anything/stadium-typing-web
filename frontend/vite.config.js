@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import path from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,10 +12,11 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
-      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
-      '@hooks': fileURLToPath(new URL('./src/hooks', import.meta.url)),
+      '@components': path.resolve(__dirname, "./src/components"),
+      '@data': path.resolve(__dirname, './src/data'),
+      '@utils': path.resolve(__dirname, './src/utils'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@assets': path.resolve(__dirname, './src/assets') 
     },
   },
 })
