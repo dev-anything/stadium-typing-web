@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Stadium from "./Stadium";
+import LeagueBtn from "./LeagueBtn";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 
@@ -42,7 +43,7 @@ const Home = () => {
   let letterIndex = 0;
 
   return (
-    <div className="relative min-h-screen bg-[#0B1F17] text-[#F4F5F0]">
+    <div className="relative min-h-screen bg-[#0B1F17] text-[#F4F5F0] overflow-y-hidden">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -123,7 +124,7 @@ const Home = () => {
           </div>
 
           <p className="font-body mx-auto mt-8 max-w-md text-center text-sm leading-relaxed text-[#9CB0A6]">
-            Type real stadium names from every continent. Get it right,
+            Type real stadium names from every league. Get it right,
             and the map flies you to the next ground.
           </p>
 
@@ -133,8 +134,15 @@ const Home = () => {
             </button>
           </div>
         </main>
+        <div className="font-display flex justify-center gap-3">
+          {LEAGUE.map((league) => {
+            return (
+              <LeagueBtn key={league.key} league={league}/>
+            );
+          })}
+        </div>
 
-        <div>
+        {/*<div>
           {LEAGUE.map((league) => {
             return (
               <button
@@ -147,7 +155,7 @@ const Home = () => {
               </button>
             )
           })}
-        </div>
+        </div>*/}
 
         {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
         <section className="mx-auto max-w-4xl px-6 py-16">

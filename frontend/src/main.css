@@ -1,10 +1,11 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 @theme {
   --font-ibm-plex-mono: "IBM Plex Mono", monospace;
   --font-pretendard: "Pretendard";
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+  /*overflow-y-hidden;*/
 }
 
 @layer components {
