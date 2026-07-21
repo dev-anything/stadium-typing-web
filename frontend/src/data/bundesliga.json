@@ -1,0 +1,146 @@
+[
+  {
+    "id": "bun-001",
+    "league": "Bundesliga",
+    "club": "FC Bayern Munich",
+    "stadium": "Allianz Arena",
+    "latitude": 48.2186,
+    "longitude": 11.6247
+  },
+  {
+    "id": "bun-002",
+    "league": "Bundesliga",
+    "club": "Borussia Dortmund",
+    "stadium": "Signal Iduna Park",
+    "latitude": 51.4926,
+    "longitude": 7.4519
+  },
+  {
+    "id": "bun-003",
+    "league": "Bundesliga",
+    "club": "Bayer 04 Leverkusen",
+    "stadium": "BayArena",
+    "latitude": 51.0383,
+    "longitude": 6.9842
+  },
+  {
+    "id": "bun-004",
+    "league": "Bundesliga",
+    "club": "RB Leipzig",
+    "stadium": "Red Bull Arena",
+    "latitude": 51.3458,
+    "longitude": 12.3483
+  },
+  {
+    "id": "bun-005",
+    "league": "Bundesliga",
+    "club": "Eintracht Frankfurt",
+    "stadium": "Deutsche Bank Park",
+    "latitude": 50.0686,
+    "longitude": 8.6455
+  },
+  {
+    "id": "bun-006",
+    "league": "Bundesliga",
+    "club": "VfB Stuttgart",
+    "stadium": "MHPArena",
+    "latitude": 48.7922,
+    "longitude": 9.2320
+  },
+  {
+    "id": "bun-007",
+    "league": "Bundesliga",
+    "club": "Borussia Monchengladbach",
+    "stadium": "BORUSSIA-PARK",
+    "latitude": 51.1747,
+    "longitude": 6.3856
+  },
+  {
+    "id": "bun-008",
+    "league": "Bundesliga",
+    "club": "VfL Wolfsburg",
+    "stadium": "Volkswagen Arena",
+    "latitude": 52.4325,
+    "longitude": 10.8039
+  },
+  {
+    "id": "bun-009",
+    "league": "Bundesliga",
+    "club": "SC Freiburg",
+    "stadium": "Europa-Park Stadion",
+    "latitude": 48.0206,
+    "longitude": 7.8286
+  },
+  {
+    "id": "bun-010",
+    "league": "Bundesliga",
+    "club": "TSG 1899 Hoffenheim",
+    "stadium": "PreZero Arena",
+    "latitude": 49.2381,
+    "longitude": 8.8886
+  },
+  {
+    "id": "bun-011",
+    "league": "Bundesliga",
+    "club": "1. FSV Mainz 05",
+    "stadium": "MEWA ARENA",
+    "latitude": 49.9842,
+    "longitude": 8.2242
+  },
+  {
+    "id": "bun-012",
+    "league": "Bundesliga",
+    "club": "FC Augsburg",
+    "stadium": "WWK ARENA",
+    "latitude": 48.3228,
+    "longitude": 10.8861
+  },
+  {
+    "id": "bun-013",
+    "league": "Bundesliga",
+    "club": "SV Werder Bremen",
+    "stadium": "Weserstadion",
+    "latitude": 53.0664,
+    "longitude": 8.8378
+  },
+  {
+    "id": "bun-014",
+    "league": "Bundesliga",
+    "club": "1. FC Union Berlin",
+    "stadium": "Stadion An der Alten Försterei",
+    "latitude": 52.4572,
+    "longitude": 13.5681
+  },
+  {
+    "id": "bun-015",
+    "league": "Bundesliga",
+    "club": "1. FC Heidenheim",
+    "stadium": "Voith-Arena",
+    "latitude": 48.6686,
+    "longitude": 10.1394
+  },
+  {
+    "id": "bun-016",
+    "league": "Bundesliga",
+    "club": "FC St. Pauli",
+    "stadium": "Millerntor-Stadion",
+    "latitude": 53.5544,
+    "longitude": 9.9681
+  },
+  {
+    "id": "bun-017",
+    "league": "Bundesliga",
+    "club": "Holstein Kiel",
+    "stadium": "Holstein-Stadion",
+    "latitude": 54.3492,
+    "longitude": 10.1236
+  },
+  {
+    "id": "bun-018",
+    "league": "Bundesliga",
+    "club": "VfL Bochum",
+    "stadium": "Vonovia Ruhrstadion",
+    "latitude": 51.4900,
+    "longitude": 7.2364
+  }
+]

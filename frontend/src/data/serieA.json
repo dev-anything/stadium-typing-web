@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sea-001",
+    "league": "Serie A",
+    "club": "AC Milan",
+    "stadium": "San Siro",
+    "latitude": 45.4781,
+    "longitude": 9.1240
+  },
+  {
+    "id": "sea-002",
+    "league": "Serie A",
+    "club": "Inter Milan",
+    "stadium": "Stadio Giuseppe Meazza",
+    "latitude": 45.4781,
+    "longitude": 9.1240
+  },
+  {
+    "id": "sea-003",
+    "league": "Serie A",
+    "club": "Juventus FC",
+    "stadium": "Allianz Stadium",
+    "latitude": 45.1094,
+    "longitude": 7.6411
+  },
+  {
+    "id": "sea-004",
+    "league": "Serie A",
+    "club": "AS Roma",
+    "stadium": "Stadio Olimpico",
+    "latitude": 41.9341,
+    "longitude": 12.4547
+  },
+  {
+    "id": "sea-005",
+    "league": "Serie A",
+    "club": "SS Lazio",
+    "stadium": "Stadio Olimpico",
+    "latitude": 41.9341,
+    "longitude": 12.4547
+  },
+  {
+    "id": "sea-006",
+    "league": "Serie A",
+    "club": "SSC Napoli",
+    "stadium": "Stadio Diego Armando Maradona",
+    "latitude": 40.8279,
+    "longitude": 14.1930
+  },
+  {
+    "id": "sea-007",
+    "league": "Serie A",
+    "club": "Atalanta BC",
+    "stadium": "Gewiss Stadium",
+    "latitude": 45.7092,
+    "longitude": 9.6808
+  },
+  {
+    "id": "sea-008",
+    "league": "Serie A",
+    "club": "ACF Fiorentina",
+    "stadium": "Stadio Artemio Franchi",
+    "latitude": 43.7808,
+    "longitude": 11.2825
+  },
+  {
+    "id": "sea-009",
+    "league": "Serie A",
+    "club": "Bologna FC 1909",
+    "stadium": "Stadio Renato Dall'Ara",
+    "latitude": 44.4922,
+    "longitude": 11.3097
+  },
+  {
+    "id": "sea-010",
+    "league": "Serie A",
+    "club": "Torino FC",
+    "stadium": "Stadio Olimpico Grande Torino",
+    "latitude": 45.0422,
+    "longitude": 7.6500
+  },
+  {
+    "id": "sea-011",
+    "league": "Serie A",
+    "club": "Udinese Calcio",
+    "stadium": "Bluenergy Stadium",
+    "latitude": 46.0817,
+    "longitude": 13.2003
+  },
+  {
+    "id": "sea-012",
+    "league": "Serie A",
+    "club": "Genoa CFC",
+    "stadium": "Stadio Luigi Ferraris",
+    "latitude": 44.4164,
+    "longitude": 8.9525
+  },
+  {
+    "id": "sea-013",
+    "league": "Serie A",
+    "club": "US Lecce",
+    "stadium": "Stadio Via del Mare",
+    "latitude": 40.3556,
+    "longitude": 18.2081
+  },
+  {
+    "id": "sea-014",
+    "league": "Serie A",
+    "club": "Hellas Verona",
+    "stadium": "Stadio Marcantonio Bentegodi",
+    "latitude": 45.4353,
+    "longitude": 10.9686
+  },
+  {
+    "id": "sea-015",
+    "league": "Serie A",
+    "club": "Cagliari Calcio",
+    "stadium": "Unipol Domus",
+    "latitude": 39.1997,
+    "longitude": 9.1361
+  },
+  {
+    "id": "sea-016",
+    "league": "Serie A",
+    "club": "Empoli FC",
+    "stadium": "Stadio Carlo Castellani",
+    "latitude": 43.7264,
+    "longitude": 10.9550
+  },
+  {
+    "id": "sea-017",
+    "league": "Serie A",
+    "club": "Parma Calcio 1913",
+    "stadium": "Stadio Ennio Tardini",
+    "latitude": 44.7958,
+    "longitude": 10.3383
+  },
+  {
+    "id": "sea-018",
+    "league": "Serie A",
+    "club": "Como 1907",
+    "stadium": "Stadio Giuseppe Sinigaglia",
+    "latitude": 45.8139,
+    "longitude": 9.0739
+  },
+  {
+    "id": "sea-019",
+    "league": "Serie A",
+    "club": "AC Monza",
+    "stadium": "U-Power Stadium",
+    "latitude": 45.5828,
+    "longitude": 9.2817
+  },
+  {
+    "id": "sea-020",
+    "league": "Serie A",
+    "club": "Venezia FC",
+    "stadium": "Stadio Pier Luigi Penzo",
+    "latitude": 45.4264,
+    "longitude": 12.3619
+  }
+]

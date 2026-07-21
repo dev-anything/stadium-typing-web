@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fl1-001",
+    "league": "Ligue 1",
+    "club": "Paris Saint-Germain",
+    "stadium": "Parc des Princes",
+    "latitude": 48.8414,
+    "longitude": 2.2530
+  },
+  {
+    "id": "fl1-002",
+    "league": "Ligue 1",
+    "club": "Olympique de Marseille",
+    "stadium": "Orange Velodrome",
+    "latitude": 43.2699,
+    "longitude": 5.3959
+  },
+  {
+    "id": "fl1-003",
+    "league": "Ligue 1",
+    "club": "Olympique Lyonnais",
+    "stadium": "Groupama Stadium",
+    "latitude": 45.7653,
+    "longitude": 4.9820
+  },
+  {
+    "id": "fl1-004",
+    "league": "Ligue 1",
+    "club": "AS Monaco",
+    "stadium": "Stade Louis II",
+    "latitude": 43.7275,
+    "longitude": 7.4156
+  },
+  {
+    "id": "fl1-005",
+    "league": "Ligue 1",
+    "club": "LOSC Lille",
+    "stadium": "Decathlon Arena Stade Pierre-Mauroy",
+    "latitude": 50.6119,
+    "longitude": 3.1306
+  },
+  {
+    "id": "fl1-006",
+    "league": "Ligue 1",
+    "club": "RC Lens",
+    "stadium": "Stade Bollaert-Delelis",
+    "latitude": 50.4328,
+    "longitude": 2.8147
+  },
+  {
+    "id": "fl1-007",
+    "league": "Ligue 1",
+    "club": "OGC Nice",
+    "stadium": "Allianz Riviera",
+    "latitude": 43.7053,
+    "longitude": 7.1925
+  },
+  {
+    "id": "fl1-008",
+    "league": "Ligue 1",
+    "club": "Stade Rennais FC",
+    "stadium": "Roazhon Park",
+    "latitude": 48.1075,
+    "longitude": -1.7128
+  },
+  {
+    "id": "fl1-009",
+    "league": "Ligue 1",
+    "club": "FC Nantes",
+    "stadium": "Stade de la Beaujoire",
+    "latitude": 47.2561,
+    "longitude": -1.5247
+  },
+  {
+    "id": "fl1-010",
+    "league": "Ligue 1",
+    "club": "Toulouse FC",
+    "stadium": "Stadium de Toulouse",
+    "latitude": 43.5833,
+    "longitude": 1.4342
+  },
+  {
+    "id": "fl1-011",
+    "league": "Ligue 1",
+    "club": "RC Strasbourg Alsace",
+    "stadium": "Stade de la Meinau",
+    "latitude": 48.5600,
+    "longitude": 7.7547
+  },
+  {
+    "id": "fl1-012",
+    "league": "Ligue 1",
+    "club": "Montpellier HSC",
+    "stadium": "Stade de la Mosson",
+    "latitude": 43.6225,
+    "longitude": 3.8128
+  },
+  {
+    "id": "fl1-013",
+    "league": "Ligue 1",
+    "club": "Stade de Reims",
+    "stadium": "Stade Auguste-Delaune",
+    "latitude": 49.2464,
+    "longitude": 4.0253
+  },
+  {
+    "id": "fl1-014",
+    "league": "Ligue 1",
+    "club": "Stade Brestois 29",
+    "stadium": "Stade Francis-Le Blé",
+    "latitude": 48.4031,
+    "longitude": -4.4631
+  },
+  {
+    "id": "fl1-015",
+    "league": "Ligue 1",
+    "club": "AS Saint-Etienne",
+    "stadium": "Stade Geoffroy-Guichard",
+    "latitude": 45.4608,
+    "longitude": 4.3903
+  },
+  {
+    "id": "fl1-016",
+    "league": "Ligue 1",
+    "club": "AJ Auxerre",
+    "stadium": "Stade de l'Abbé-Deschamps",
+    "latitude": 47.7867,
+    "longitude": 3.5886
+  },
+  {
+    "id": "fl1-017",
+    "league": "Ligue 1",
+    "club": "Angers SCO",
+    "stadium": "Stade Raymond Kopa",
+    "latitude": 47.4606,
+    "longitude": -0.5308
+  },
+  {
+    "id": "fl1-018",
+    "league": "Ligue 1",
+    "club": "Le Havre AC",
+    "stadium": "Stade Océane",
+    "latitude": 49.4989,
+    "longitude": 0.1697
+  }
+]

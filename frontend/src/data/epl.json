@@ -1,0 +1,182 @@
+[
+  {
+    "id": "epl-001",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Arsenal",
+    "stadium": "Emirates Stadium",
+    "latitude": 51.5549,
+    "longitude": -0.1084
+  },
+  {
+    "id": "epl-002",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Aston Villa",
+    "stadium": "Villa Park",
+    "latitude": 52.5091,
+    "longitude": -1.8848
+  },
+  {
+    "id": "epl-003",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "AFC Bournemouth",
+    "stadium": "Vitality Stadium",
+    "latitude": 50.7353,
+    "longitude": -1.8383
+  },
+  {
+    "id": "epl-004",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Brentford",
+    "stadium": "Gtech Community Stadium",
+    "latitude": 51.4908,
+    "longitude": -0.2886
+  },
+  {
+    "id": "epl-005",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Brighton & Hove Albion",
+    "stadium": "American Express Stadium",
+    "latitude": 50.8618,
+    "longitude": -0.0837
+  },
+  {
+    "id": "epl-006",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Burnley",
+    "stadium": "Turf Moor",
+    "latitude": 53.7888,
+    "longitude": -2.2302
+  },
+  {
+    "id": "epl-007",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Chelsea",
+    "stadium": "Stamford Bridge",
+    "latitude": 51.4817,
+    "longitude": -0.1910
+  },
+  {
+    "id": "epl-008",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Crystal Palace",
+    "stadium": "Selhurst Park",
+    "latitude": 51.3983,
+    "longitude": -0.0855
+  },
+  {
+    "id": "epl-009",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Everton",
+    "stadium": "Everton Stadium",
+    "latitude": 53.4251,
+    "longitude": -3.0019
+  },
+  {
+    "id": "epl-010",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Fulham",
+    "stadium": "Craven Cottage",
+    "latitude": 51.4749,
+    "longitude": -0.2217
+  },
+  {
+    "id": "epl-011",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Leeds United",
+    "stadium": "Elland Road",
+    "latitude": 53.7778,
+    "longitude": -1.5722
+  },
+  {
+    "id": "epl-012",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Liverpool",
+    "stadium": "Anfield",
+    "latitude": 53.4308,
+    "longitude": -2.9608
+  },
+  {
+    "id": "epl-013",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Manchester City",
+    "stadium": "Etihad Stadium",
+    "latitude": 53.4831,
+    "longitude": -2.2004
+  },
+  {
+    "id": "epl-014",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Manchester United",
+    "stadium": "Old Trafford",
+    "latitude": 53.4631,
+    "longitude": -2.2914
+  },
+  {
+    "id": "epl-015",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Newcastle United",
+    "stadium": "St James' Park",
+    "latitude": 54.9756,
+    "longitude": -1.6217
+  },
+  {
+    "id": "epl-016",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Nottingham Forest",
+    "stadium": "City Ground",
+    "latitude": 52.9400,
+    "longitude": -1.1328
+  },
+  {
+    "id": "epl-017",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Sunderland",
+    "stadium": "Stadium of Light",
+    "latitude": 54.9146,
+    "longitude": -1.3884
+  },
+  {
+    "id": "epl-018",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Tottenham Hotspur",
+    "stadium": "Tottenham Hotspur Stadium",
+    "latitude": 51.6044,
+    "longitude": -0.0664
+  },
+  {
+    "id": "epl-019",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "West Ham United",
+    "stadium": "London Stadium",
+    "latitude": 51.5387,
+    "longitude": -0.0166
+  },
+  {
+    "id": "epl-020",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Wolverhampton Wanderers",
+    "stadium": "Molineux Stadium",
+    "latitude": 52.5902,
+    "longitude": -2.1304
+  }
+]

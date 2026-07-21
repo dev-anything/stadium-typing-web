@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import allStadiumList from "@data/main.json";
+import eplStadiumList from "@data/epl.json";
 import useShuffle from "../hooks/useShuffle";
 
 const buildKeyMap = () => {
@@ -66,7 +67,7 @@ const resolveChar = (e) => {
 }
 
 const TypeArea = ({ onChange }) => {
-  const { current, next, isFinished, progress } = useShuffle({ items: allStadiumList });
+  const { current, next, isFinished, progress } = useShuffle({ items: eplStadiumList });
   const target = current.stadium;
 
 
@@ -181,7 +182,7 @@ const TypeArea = ({ onChange }) => {
           })()}
         </span>
       </div>
-      
+      <div>{progress}</div>
     </div>
   );
 }

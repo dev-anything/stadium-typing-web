@@ -1,8 +1,5 @@
-import europeStadiums from "@data/europe.json";
 import allStadiums from "@data/main.json";
 
-
-const EUROPE = europeStadiums;
 const ALL = allStadiums;
 
 const StadiumSelector = ( { onChange } ) => {

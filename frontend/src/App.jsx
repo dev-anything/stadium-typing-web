@@ -4,23 +4,14 @@ import StadiumMap from "@components/StadiumMap"
 import StadiumSelector from "@components/StadiumSelector"
 //import Test from "@components/Test"
 import TypeArea from "@components/TypeArea"
+import Home from "@components/Home"
 
 import allStadium from "@data/main.json";
-import europeStadiums from "@data/europe.json"
-import asiaStadiums from "@data/asia.json"
-import africaStadiums from "@data/africa.json"
-import northcentralamericaStadiums from "@data/northcentralamerica.json"
-import oceaniaStadiums from "@data/oceania.json"
-import southamericaStadiums from "@data/southamerica.json"
+import eplStadiumList from "@data/epl.json";
+import { Route, Routes } from "react-router-dom";
+import Index from "./components/Index"
 
-const STADIUMS = [
-  { id: "eu", data: europeStadiums },
-  { id: "as", data: asiaStadiums },
-  { id: "af", data: africaStadiums },
-  { id: "na", data: northcentralamericaStadiums },
-  { id: "oc", data: oceaniaStadiums },
-  { id: "sa", data: southamericaStadiums },
-]
+
 
 
 const App = () => {
@@ -29,7 +20,7 @@ const App = () => {
   const [longitude, setLongitude] = useState();
 
   useEffect(() => {
-    const found = allStadium.find(s => s.stadium === stadium);
+    const found = eplStadiumList.find(s => s.stadium === stadium);
     //console.log(found)
 
     if (found)
@@ -44,16 +35,19 @@ const App = () => {
   return (
     <>
       {/*<StadiumSelector onChange={setStadium} />*/}
-      <h1>{stadium}</h1>
+      {/*<h1>{stadium}</h1>
       <StadiumMap
         latitude={latitude}
         longitude={longitude}
         stadiumName={stadium}
       />
-      <TypeArea onChange={setStadium} />
+      <TypeArea onChange={setStadium} />*/}
 
 
-      {/*<Test />*/}
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/index" element={<Index />} />
+      </Routes>
     </>
   )
 }

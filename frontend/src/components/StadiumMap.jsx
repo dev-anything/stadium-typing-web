@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, useMap, Marker, Popup, ZoomControl } from "react-leaflet";
 import L from 'leaflet';
 import { useEffect } from "react";
 
@@ -30,15 +30,13 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
   }
 
   return (
-    <MapContainer center={[latitude, longitude]} zoom={8} scrollWheelZoom={false} style={{ height: '500px', width: '100%' }}>
-      {/*<TileLayer 
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />*/}
+    <MapContainer center={[latitude, longitude]} zoom={8} zoomControl={false} scrollWheelZoom={false} style={{ height: '500px', width: '100%' }}>
+
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
       />
+      {/*<ZoomControl position="bottomright" />*/}
       <MapUpdater latitude={latitude} longitude={longitude} />
       <Marker position={[latitude, longitude]} icon={stadiumIcon}>
         <Popup>{stadiumName}</Popup>
