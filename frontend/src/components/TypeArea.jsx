@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import allStadiumList from "@data/main.json";
 import eplStadiumList from "@data/epl.json";
 import useShuffle from "../hooks/useShuffle";
+import { useNavigate } from "react-router-dom";
 
 const buildKeyMap = () => {
   const map = {}
@@ -66,11 +67,12 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onComplete }) => {
+const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
   //console.log("TypeArea Com: ", stadiumName);
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!stadiumName) return;
@@ -87,11 +89,17 @@ const TypeArea = ({ stadiumName, onComplete }) => {
   useEffect(() => {
     if (typed === stadiumName)
     {
-      const timer = setTimeout(() => {
-        setTyped('');
-        onComplete();
-      });
-      return () => clearTimeout(timer);
+      setTyped('');
+      onComplete();
+      if (currentStage == stage)
+      {
+        navigate("/home");
+      }
+      //const timer = setTimeout(() => {
+      //  setTyped('');
+      //  onComplete();
+      //});
+      //return () => clearTimeout(timer);
     }
   }, [typed, stadiumName, onComplete]);
 

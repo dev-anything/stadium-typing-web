@@ -17,7 +17,8 @@ const useShuffle = ({ items }) => {
     setIndex(0);
   }, []);
   
-  return { current, next, reset, isFinished, progress: `${index + 1} / ${shuffled.length}` };
+  //return { current, next, reset, isFinished, progress: `${index + 1} / ${shuffled.length}` };
+  return { current, next, reset, isFinished, currentStage: index + 1, stage: shuffled.length };
 }
 
 export default useShuffle;
