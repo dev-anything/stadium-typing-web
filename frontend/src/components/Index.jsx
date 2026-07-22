@@ -51,7 +51,7 @@ const LEAGUE = [
 const Home = () => {
   const [popUp, setPopUp] = useState(false);
   return (
-    <ContentLayout>
+    <>
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
       <HeroCard heroword={heroWords}/>
       <StartBtn onClick={() => setPopUp(!popUp)} />
@@ -96,7 +96,7 @@ const Home = () => {
         </div>
       </section>*/}
       
-    </ContentLayout>
+    </>
   );
 };
 

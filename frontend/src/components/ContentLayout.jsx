@@ -1,11 +1,13 @@
-const IndexLayout = ({ children }) => {
+import { Outlet } from "react-router-dom";
+
+const ContentLayout = () => {
   return (
     <div 
       className="relative mx-auto max-w-3xl"
     >
-      {children}
+      <Outlet />
     </div>
   );
 }
 
-export default IndexLayout;
+export default ContentLayout;
