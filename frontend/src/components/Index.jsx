@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import Stadium from "@components/Stadium";
-import LeagueBtn from "@components/LeagueBtn";
+import LeagueBtnSelector from "@components/LeagueBtnSelector";
 import Header from "@components/Header";
 import Footer from "./Footer";
-import IndexLayout from "./IndexLayout";
+import ContentLayout from "./ContentLayout";
+import HeroCard from "./HeroCard";
+import { useState } from "react";
+import StartBtn from "./StartBtn";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 
@@ -46,113 +49,54 @@ const LEAGUE = [
 ]
 
 const Home = () => {
-  let letterIndex = 0;
-
+  const [popUp, setPopUp] = useState(false);
   return (
-    <div className="relative min-h-screen bg-[#0B1F17] text-[#F4F5F0]">
-      
-      {/* 은은한 조명 하나만 남김 */}
+    <ContentLayout>
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
+      <HeroCard heroword={heroWords}/>
+      <StartBtn onClick={() => setPopUp(!popUp)} />
+      
 
-      <IndexLayout>
-        {/* 상단 바 */}
-        <Header />
+      <LeagueBtnSelector isOpen={popUp} onClose={setPopUp} league={LEAGUE} />
 
-        {/* 히어로 */}
-        <main className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:pt-20">
-          <div className="flip-stage flex flex-wrap items-end justify-center gap-x-3 gap-y-2">
-            {heroWords.map((word, wi) => (
-              <div key={wi} className="flex">
-                {word.split("").map((char, ci) => {
-                  const delay = letterIndex * 0.06;
-                  letterIndex += 1;
-                  return (
-                    <span
-                      key={ci}
-                      className="flip-tile font-display text-2xl font-bold text-[#FFB454] sm:text-4xl"
-                      style={{ animationDelay: `${delay}s` }}
-                    >
-                      {char}
-                    </span>
-                  );
-                })}
-              </div>
-            ))}
-          </div>
+      
 
-          <p className="font-body mx-auto mt-8 max-w-md text-center text-sm leading-relaxed text-[#9CB0A6]">
-            Type real stadium names from every league.
-            <br />Get it right, and the map flies you to the next ground.
-          </p>
-
-          <div className="mt-8 flex justify-center">
-            <button className="font-display rounded-full bg-[#3CCB6F] px-7 py-2.5 text-sm font-semibold tracking-wide text-[#0B1F17] transition hover:bg-[#4fe083] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFB454]">
-              <Link to="/play">START TYPING</Link>
-            </button>
-          </div>
-        </main>
-        <div className="font-display flex justify-center gap-3">
-          {LEAGUE.map((league) => {
-            return (
-              <LeagueBtn key={league.key} league={league}/>
-            );
-          })}
+      {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
+      {/*<section className="mx-auto max-w-4xl px-6 py-16">
+        <div className="grid gap-10 sm:grid-cols-3">
+          {routine.map((step) => (
+            <div key={step.n}>
+              <span className="font-ibm-plex-mono text-xs tracking-widest text-[#3CCB6F]">
+                {step.n}
+              </span>
+              <h3 className="font-display mt-2 text-base font-semibold">
+                {step.title}
+              </h3>
+              <p className="font-body mt-1.5 text-sm leading-relaxed text-[#8A9A91]">
+                {step.desc}
+              </p>
+            </div>
+          ))}
         </div>
+      </section>*/}
 
-        {/*<div>
-          {LEAGUE.map((league) => {
-            return (
-              <button
-                key={league.key}
-                type="button"
-                className="cursor-pointer"
-                onClick={() => console.log(league.label)}
-              >
-                <Link to={`/play/${league.key}`}>{league.label}</Link>
-              </button>
-            )
-          })}
-        </div>*/}
-
-        {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
-        {/*<section className="mx-auto max-w-4xl px-6 py-16">
-          <div className="grid gap-10 sm:grid-cols-3">
-            {routine.map((step) => (
-              <div key={step.n}>
-                <span className="font-ibm-plex-mono text-xs tracking-widest text-[#3CCB6F]">
-                  {step.n}
-                </span>
-                <h3 className="font-display mt-2 text-base font-semibold">
-                  {step.title}
-                </h3>
-                <p className="font-body mt-1.5 text-sm leading-relaxed text-[#8A9A91]">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>*/}
-
-        {/* 통계 — 얇은 구분선만 사용 */}
-        {/*<section className="border-t border-[#3CCB6F1a]">
-          <div className="mx-auto flex max-w-2xl justify-center gap-12 px-6 py-12 sm:gap-20">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <p className="font-ibm-plex-mono text-2xl font-bold text-[#3CCB6F] sm:text-3xl">
-                  {s.value}
-                </p>
-                <p className="font-ibm-plex-mono mt-1 text-[10px] tracking-[0.2em] text-[#5C6F65]">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>*/}
-
-        {/* 푸터 — 텍스트 한 줄 */}
-        <Footer />
-      </IndexLayout>
-    </div>
+      {/* 통계 — 얇은 구분선만 사용 */}
+      {/*<section className="border-t border-[#3CCB6F1a]">
+        <div className="mx-auto flex max-w-2xl justify-center gap-12 px-6 py-12 sm:gap-20">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p className="font-ibm-plex-mono text-2xl font-bold text-[#3CCB6F] sm:text-3xl">
+                {s.value}
+              </p>
+              <p className="font-ibm-plex-mono mt-1 text-[10px] tracking-[0.2em] text-[#5C6F65]">
+                {s.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>*/}
+      
+    </ContentLayout>
   );
 };
 

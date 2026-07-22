@@ -107,7 +107,7 @@
     "id": "fl1-014",
     "league": "Ligue 1",
     "club": "Stade Brestois 29",
-    "stadium": "Stade Francis-Le Blé",
+    "stadium": "Stade Francis-Le Ble",
     "latitude": 48.4031,
     "longitude": -4.4631
   },
@@ -123,7 +123,7 @@
     "id": "fl1-016",
     "league": "Ligue 1",
     "club": "AJ Auxerre",
-    "stadium": "Stade de l'Abbé-Deschamps",
+    "stadium": "Stade de l'Abbe-Deschamps",
     "latitude": 47.7867,
     "longitude": 3.5886
   },
@@ -139,7 +139,7 @@
     "id": "fl1-018",
     "league": "Ligue 1",
     "club": "Le Havre AC",
-    "stadium": "Stade Océane",
+    "stadium": "Stade Oceane",
     "latitude": 49.4989,
     "longitude": 0.1697
   }
