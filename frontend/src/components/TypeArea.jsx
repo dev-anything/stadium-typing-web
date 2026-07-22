@@ -129,7 +129,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
   }
 
   return (
-    <div className="p-4" onClick={() => inputRef.current?.focus()}>
+    <div className="border-3 flex justify-center align-middle p-4" onClick={() => inputRef.current?.focus()}>
       <input
         ref={inputRef}
         type="text"
@@ -144,7 +144,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
       />
-      <div className="font-ibm-plex-mono text-xs bg-gray-100 p-4 rounded w-1/2">
+      <div className="font-mono text-[15px] bg-gray-100 p-4 rounded ">
         <span className="whitespace-pre relative flex flex-wrap">
           {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
@@ -160,13 +160,24 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
             }
             return <span key={i} className={className}>{char}</span>
           })}
-          {(() => {
+          {/*{(() => {
             const cursorCol = typed.length
             if (cursorCol < 0 || cursorCol > stadiumName.length) return null
             //if (cursorAtLineEnd) return null
             return (
               <span
-                className="absolute top-0 bottom-0 w-0.5 bg-blue-500 pointer-events-none"
+                className="absolute top-0 bottom-0 h-1 w-1.5 bg-blue-500 pointer-events-none"
+                style={{ bottom: `${cursorCol}ch` }}
+              />
+            )
+          })()}*/}
+          {(() => {
+            const cursorCol = typed.length
+            if (cursorCol < 0 || cursorCol > stadiumName.length) return null
+
+            return (
+              <span
+                className="absolute bottom-0 h-0.5 w-[1ch] bg-blue-500 pointer-events-none"
                 style={{ left: `${cursorCol}ch` }}
               />
             )

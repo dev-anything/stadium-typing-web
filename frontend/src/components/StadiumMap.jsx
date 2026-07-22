@@ -69,11 +69,17 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
   }
 
   return (
-    <MapContainer center={[latitude, longitude]} zoom={8} zoomControl={false} scrollWheelZoom={false} style={{ height: '500px', width: '100%' }}>
-
+    <MapContainer
+      center={[latitude, longitude]}
+      zoom={6}
+      zoomControl={false}
+      scrollWheelZoom={false} 
+      style={{ height: '500px', width: '100%' }}
+      className="w-full mt-10"
+    >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        attribution='&copy; OpenStreetMap contributors &copy; CARTO'
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       {/*<ZoomControl position="bottomright" />*/}
       <MapUpdater latitude={latitude} longitude={longitude} />
