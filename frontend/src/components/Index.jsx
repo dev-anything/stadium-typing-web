@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-import Stadium from "./Stadium";
-import LeagueBtn from "./LeagueBtn";
+import Stadium from "@components/Stadium";
+import LeagueBtn from "@components/LeagueBtn";
+import Header from "@components/Header";
+import Footer from "./Footer";
+import IndexLayout from "./IndexLayout";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 
@@ -35,6 +38,9 @@ const LEAGUE = [
   { key: "bundesliga", label: "Bundesliga" },
   { key: "seriea", label: "Serie A" },
   { key: "ligue1", label: "Ligue 1" },
+  { key: "eredivisie", label: "Eredivisie" },
+  { key: "primeiraliga", label: "Premeira Liga" },
+  { key: "saudi", label: "Saudi Pro League" },
   { key: "k1", label: "K League 1" },
   { key: "k2", label: "K League 2" },
 ]
@@ -43,63 +49,14 @@ const Home = () => {
   let letterIndex = 0;
 
   return (
-    <div className="relative min-h-screen bg-[#0B1F17] text-[#F4F5F0] overflow-y-hidden">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
-        .font-display { font-family: 'Oswald', sans-serif; }
-        .font-body { font-family: 'Inter', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-
-        .flip-stage {
-          perspective: 800px;
-        }
-
-        .flip-tile {
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: clamp(2.1rem, 6.5vw, 4rem);
-          height: clamp(2.6rem, 8vw, 5rem);
-          margin: 0 3px;
-          background: linear-gradient(180deg, #16332470 0%, #0d2118 100%);
-          border: 1px solid #3ccb6f2a;
-          border-radius: 6px;
-          transform-origin: top center;
-          animation: flipDown 0.7s cubic-bezier(.2,.9,.3,1) both;
-        }
-
-        .flip-tile::after {
-          content: '';
-          position: absolute;
-          left: 0; right: 0; top: 50%;
-          height: 1px;
-          background: rgba(0,0,0,0.4);
-        }
-
-        @keyframes flipDown {
-          0%   { transform: rotateX(-100deg); opacity: 0; }
-          65%  { transform: rotateX(8deg); }
-          100% { transform: rotateX(0deg); opacity: 1; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .flip-tile { animation: none; opacity: 1; transform: none; }
-        }
-      `}</style>
-
+    <div className="relative min-h-screen bg-[#0B1F17] text-[#F4F5F0]">
+      
       {/* 은은한 조명 하나만 남김 */}
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
 
-      <div className="relative">
+      <IndexLayout>
         {/* 상단 바 */}
-        <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
-          <span className="font-display text-base tracking-wide">STADIO TYPE</span>
-          <span className="font-ibm-plex-mono text-[10px] tracking-widest text-[#5C6F65]">
-            WORLD TOUR
-          </span>
-        </header>
+        <Header />
 
         {/* 히어로 */}
         <main className="mx-auto max-w-3xl px-6 pb-24 pt-12 sm:pt-20">
@@ -124,8 +81,8 @@ const Home = () => {
           </div>
 
           <p className="font-body mx-auto mt-8 max-w-md text-center text-sm leading-relaxed text-[#9CB0A6]">
-            Type real stadium names from every league. Get it right,
-            and the map flies you to the next ground.
+            Type real stadium names from every league.
+            <br />Get it right, and the map flies you to the next ground.
           </p>
 
           <div className="mt-8 flex justify-center">
@@ -158,7 +115,7 @@ const Home = () => {
         </div>*/}
 
         {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
-        <section className="mx-auto max-w-4xl px-6 py-16">
+        {/*<section className="mx-auto max-w-4xl px-6 py-16">
           <div className="grid gap-10 sm:grid-cols-3">
             {routine.map((step) => (
               <div key={step.n}>
@@ -174,7 +131,7 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section>*/}
 
         {/* 통계 — 얇은 구분선만 사용 */}
         {/*<section className="border-t border-[#3CCB6F1a]">
@@ -193,12 +150,8 @@ const Home = () => {
         </section>*/}
 
         {/* 푸터 — 텍스트 한 줄 */}
-        <footer className="mx-auto max-w-3xl px-6 py-10 text-center">
-          <p className="font-ibm-plex-mono text-[15px] tracking-widest text-[#5C6F65]">
-            Made by dev_anything_
-          </p>
-        </footer>
-      </div>
+        <Footer />
+      </IndexLayout>
     </div>
   );
 };

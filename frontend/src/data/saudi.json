@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sau-001",
+    "league": "Saudi Pro League",
+    "club": "Al-Ahli Saudi FC",
+    "stadium": "King Abdullah Sports City",
+    "latitude": 21.7608,
+    "longitude": 39.1581
+  },
+  {
+    "id": "sau-002",
+    "league": "Saudi Pro League",
+    "club": "Al-Ettifaq FC",
+    "stadium": "Prince Mohamed bin Fahd Stadium",
+    "latitude": 26.4328,
+    "longitude": 50.1069
+  },
+  {
+    "id": "sau-003",
+    "league": "Saudi Pro League",
+    "club": "Al-Fateh SC",
+    "stadium": "Prince Abdullah bin Jalawi Stadium",
+    "latitude": 25.3853,
+    "longitude": 49.5842
+  },
+  {
+    "id": "sau-004",
+    "league": "Saudi Pro League",
+    "club": "Al-Fayha FC",
+    "stadium": "Al-Majma'ah Sports City",
+    "latitude": 25.8972,
+    "longitude": 45.3619
+  },
+  {
+    "id": "sau-005",
+    "league": "Saudi Pro League",
+    "club": "Al-Hazem SC",
+    "stadium": "Al-Hazem Club Stadium",
+    "latitude": 25.8608,
+    "longitude": 43.4986
+  },
+  {
+    "id": "sau-006",
+    "league": "Saudi Pro League",
+    "club": "Al-Hilal SFC",
+    "stadium": "Kingdom Arena",
+    "latitude": 24.7644,
+    "longitude": 46.6186
+  },
+  {
+    "id": "sau-007",
+    "league": "Saudi Pro League",
+    "club": "Al-Ittihad Club",
+    "stadium": "King Abdullah Sports City",
+    "latitude": 21.7608,
+    "longitude": 39.1581
+  },
+  {
+    "id": "sau-008",
+    "league": "Saudi Pro League",
+    "club": "Al-Khaleej FC",
+    "stadium": "Al-Khaleej Club Stadium",
+    "latitude": 26.5647,
+    "longitude": 50.0383
+  },
+  {
+    "id": "sau-009",
+    "league": "Saudi Pro League",
+    "club": "Al-Kholood Club",
+    "stadium": "Al-Hazem Club Stadium",
+    "latitude": 25.8608,
+    "longitude": 43.4986
+  },
+  {
+    "id": "sau-010",
+    "league": "Saudi Pro League",
+    "club": "Al-Nassr FC",
+    "stadium": "Alawwal Park",
+    "latitude": 24.7303,
+    "longitude": 46.6231
+  },
+  {
+    "id": "sau-011",
+    "league": "Saudi Pro League",
+    "club": "Al-Okhdood Club",
+    "stadium": "Prince Hathloul bin Abdulaziz Sports City Stadium",
+    "latitude": 17.5819,
+    "longitude": 44.2258
+  },
+  {
+    "id": "sau-012",
+    "league": "Saudi Pro League",
+    "club": "Al-Qadsiah FC",
+    "stadium": "Prince Saud bin Jalawi Stadium",
+    "latitude": 26.2169,
+    "longitude": 50.1983
+  },
+  {
+    "id": "sau-013",
+    "league": "Saudi Pro League",
+    "club": "Al-Riyadh SC",
+    "stadium": "Prince Turki bin Abdul Aziz Stadium",
+    "latitude": 24.7089,
+    "longitude": 46.6347
+  },
+  {
+    "id": "sau-014",
+    "league": "Saudi Pro League",
+    "club": "Al-Shabab FC",
+    "stadium": "King Fahd Sports City",
+    "latitude": 24.7884,
+    "longitude": 46.8392
+  },
+  {
+    "id": "sau-015",
+    "league": "Saudi Pro League",
+    "club": "Al-Taawoun FC",
+    "stadium": "King Abdullah Sport City Stadium (Buraydah)",
+    "latitude": 26.3808,
+    "longitude": 43.9669
+  },
+  {
+    "id": "sau-016",
+    "league": "Saudi Pro League",
+    "club": "Damac FC",
+    "stadium": "Prince Sultan bin Abdulaziz Sports City Stadium",
+    "latitude": 18.2389,
+    "longitude": 42.5608
+  },
+  {
+    "id": "sau-017",
+    "league": "Saudi Pro League",
+    "club": "NEOM SC",
+    "stadium": "King Khalid Sport City Stadium",
+    "latitude": 28.3842,
+    "longitude": 36.5686
+  },
+  {
+    "id": "sau-018",
+    "league": "Saudi Pro League",
+    "club": "Al Najmah SC",
+    "stadium": "Al-Najma Club Stadium",
+    "latitude": 26.0883,
+    "longitude": 43.9858
+  }
+]
