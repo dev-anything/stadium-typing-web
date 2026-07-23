@@ -9,7 +9,12 @@ import { useParams } from "react-router-dom";
 
 const Stadium = () => {
   const { leagueInfo } = useParams();
-  const { current, next, currentStage, stage } = useShuffle({ items: stadiumsByLeague[leagueInfo] });
+
+  
+
+  const { current, next, currentStage, stage } = useShuffle({
+    items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
+  });
 
   if (!current) return null;
 

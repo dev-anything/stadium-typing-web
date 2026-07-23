@@ -46,6 +46,7 @@ const LEAGUE = [
   { key: "saudi", label: "Saudi Pro League" },
   { key: "k1", label: "K League 1" },
   { key: "k2", label: "K League 2" },
+  { key: "random", label: "Infinite mode"}
 ]
 
 const Home = () => {
