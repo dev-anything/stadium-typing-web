@@ -63,7 +63,7 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
+const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
@@ -90,6 +90,15 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
 
   const handleKeyDown = (e) => {
     const now = performance.now()
+
+    if (onBlocked)
+    {
+      console.log(onBlocked);
+      e.preventDefault();
+      return;
+    }
+
+
     if (lastKeyRef.current.code === e.code && now - lastKeyRef.current.time < 50) {
       return
     }
@@ -143,6 +152,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
         autoCapitalize="off"
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
+        
       />
       <div className="font-mono text-[18px] p-2 rounded ">
         <span className="whitespace-pre relative flex flex-wrap">
