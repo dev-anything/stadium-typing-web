@@ -144,19 +144,19 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage }) => {
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
       />
-      <div className="font-mono text-[15px] bg-gray-100 p-4 rounded ">
+      <div className="font-mono text-[18px] p-2 rounded ">
         <span className="whitespace-pre relative flex flex-wrap">
           {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
-            let className = "text-gray-400";
+            let className = "text-gray-500";
 
             if (globalIdx < typed.length)
             {
               className = typed[globalIdx] === char
                 ?
-                "text-gray-900"
+                "text-white"
                 :
-                "text-red-500 bg-red-50"
+                "text-red-500 bg-red-100"
             }
             return <span key={i} className={className}>{char}</span>
           })}

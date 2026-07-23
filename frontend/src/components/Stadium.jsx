@@ -19,7 +19,7 @@ const Stadium = () => {
   if (!current) return null;
 
   return (
-    <>
+    <div className="flex flex-col items-center">
       <StadiumMap
         latitude={current.latitude}
         longitude={current.longitude}
@@ -31,9 +31,9 @@ const Stadium = () => {
         currentStage={currentStage}
         stage={stage}
       />
-      <div>{`${currentStage} / ${stage}`}</div>
+      <div className="font-display">{`${currentStage} / ${stage}`}</div>
       {/*{console.log(progress)}*/}
-    </>
+    </div>
   )
 }
 
