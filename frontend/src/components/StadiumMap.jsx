@@ -106,7 +106,7 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
       zoomControl={false}
       scrollWheelZoom={false} 
       style={{ width: '80%', height: '300px' }}
-      className="w-full mt-10"
+      className="w-full"
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors &copy; CARTO'
