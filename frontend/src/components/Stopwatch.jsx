@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 
 
-const Stopwatch = ({ onWaiting, millis }) => {
+const Stopwatch = ({ onWaiting, setMillis, millis }) => {
+
+  useEffect(() => {
+    if (onWaiting) return;
+    
+    const stopwatch = setInterval(() => {
+      setMillis(prev => prev + 10);
+    }, [10]);
+
+    return () => clearInterval(stopwatch);
+  }, [onWaiting]);
   
 
 

@@ -46,16 +46,7 @@ const Stadium = () => {
 
   
   
-  useEffect(() => {
-    if (isCountdowning) return;
-    
-
-    const stopwatch = setInterval(() => {
-      setMillis(prev => prev + 10);
-    }, [10]);
-
-    return () => clearInterval(stopwatch);
-  }, [isCountdowning]);
+  
 
   
   
@@ -80,7 +71,7 @@ const Stadium = () => {
       <div className="font-display">{`${currentStage} / ${stage}`}</div>
       {/*{console.log(progress)}*/}
       <Countdown count={targetCount} />
-      <Stopwatch onWaiting={isCountdowning} millis={millis} />
+      <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />
     </div>
   )
 }
