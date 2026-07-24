@@ -63,7 +63,7 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked }) => {
+const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, millis }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
@@ -83,7 +83,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked }) =
       onComplete();
       if (currentStage == stage)
       {
-        navigate("/");
+        navigate("/result", { state: millis});
       }
     }
   }, [typed, stadiumName, onComplete]);

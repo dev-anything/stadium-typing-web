@@ -5,6 +5,7 @@ import Header from "@components/Header";
 import Background from "@components/Background";
 import Footer from "@components/Footer";
 import ContentLayout from "@components/ContentLayout";
+import ResultPage from "@components/ResultPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route element={<ContentLayout />}>
           <Route path="/" element={<Index />} />
           <Route path="/play/:leagueInfo" element={<Stadium />} />
+          <Route path="/result" element={<ResultPage />} />
         </Route>
       </Routes>
       {/*</ContentLayout>*/}

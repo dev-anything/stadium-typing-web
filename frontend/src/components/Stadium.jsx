@@ -11,6 +11,7 @@ import Stopwatch from "@components/Stopwatch";
 
 const Stadium = () => {
   const [targetCount, setTargetCount] = useState();
+  const [millis, setMillis] = useState(0);
   const [isCountdowning, setIsCountdowning] = useState(true);
   const { leagueInfo } = useParams();
   const { current, next, currentStage, stage } = useShuffle({
@@ -40,9 +41,21 @@ const Stadium = () => {
         setTargetCount(remainSec);
       }
       
-      
     }, 1000);
   }, []);
+
+  
+  
+  useEffect(() => {
+    if (isCountdowning) return;
+    
+
+    const stopwatch = setInterval(() => {
+      setMillis(prev => prev + 10);
+    }, [10]);
+
+    return () => clearInterval(stopwatch);
+  }, [isCountdowning]);
 
   
   
@@ -62,11 +75,12 @@ const Stadium = () => {
         currentStage={currentStage}
         stage={stage}
         onBlocked={isCountdowning}
+        millis={millis}
       />
       <div className="font-display">{`${currentStage} / ${stage}`}</div>
       {/*{console.log(progress)}*/}
       <Countdown count={targetCount} />
-      <Stopwatch onWaiting={isCountdowning} />
+      <Stopwatch onWaiting={isCountdowning} millis={millis} />
     </div>
   )
 }
