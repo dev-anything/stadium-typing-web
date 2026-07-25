@@ -1,7 +1,4 @@
-import { Link } from "react-router-dom";
-
 const StartBtn = ({ onClick }) => {
-  //if (!isOpen) return null;
 
 
   return (

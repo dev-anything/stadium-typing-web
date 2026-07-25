@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import StadiumMap from "@components/StadiumMap";
 import TypeArea from "@components/TypeArea";
 import useShuffle from "@hooks/useShuffle";
-
 import { allStadiums, stadiumsByLeague } from "@data";
-import { useParams } from "react-router-dom";
 import Countdown from "@components/Countdown";
 import Stopwatch from "@components/Stopwatch";
 
@@ -59,6 +59,7 @@ const Stadium = () => {
         stage={stage}
         onBlocked={isCountdowning}
         millis={millis}
+        leagueInfo={leagueInfo}
       />
       <div className="font-display">{`${currentStage} / ${stage}`}</div>
       {/*{console.log(progress)}*/}
