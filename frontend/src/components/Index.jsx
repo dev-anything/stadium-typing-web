@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Stadium from "@components/Stadium";
 import LeagueBtnSelector from "@components/LeagueBtnSelector";
-import Header from "@components/Header";
-import Footer from "./Footer";
-import ContentLayout from "./ContentLayout";
+import Header from "@components/layout/Header";
+import Footer from "./layout/Footer";
+import ContentLayout from "./layout/ContentLayout";
 import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";

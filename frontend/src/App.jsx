@@ -1,17 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Index from "@components/Index"
 import Stadium from "@components/Stadium"
-import Header from "@components/Header";
-import Background from "@components/Background";
-import Footer from "@components/Footer";
-import ContentLayout from "@components/ContentLayout";
+import Header from "@components/layout/Header";
+import Background from "@components/layout/Background";
+import Footer from "@components/layout/Footer";
+import ContentLayout from "@components/layout/ContentLayout";
 import ResultPage from "@components/ResultPage";
 
 const App = () => {
   return (
     <Background>
       <Header />
-      {/*<ContentLayout>*/}
       <Routes>
         <Route element={<ContentLayout />}>
           <Route path="/" element={<Index />} />
@@ -19,7 +18,6 @@ const App = () => {
           <Route path="/result" element={<ResultPage />} />
         </Route>
       </Routes>
-      {/*</ContentLayout>*/}
       <Footer />
     </Background>
   )
