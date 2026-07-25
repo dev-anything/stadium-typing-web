@@ -31,8 +31,9 @@ const Stadium = () => {
       const remain = total - diff;
       const remainSec = Math.ceil(remain / 1000);
 
-      if (remainSec < 0)
+      if (remainSec <= 0)
       {
+        setTargetCount(0);
         setIsCountdowning(false);
         clearInterval(timer);
       }
@@ -43,15 +44,6 @@ const Stadium = () => {
       
     }, 1000);
   }, []);
-
-  
-  
-  
-
-  
-  
-
-  
 
   return (
     <div className="flex flex-col items-center relative mt-10">
