@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="mx-auto max-w-3xl px-6 py-10 text-center mt-auto">
+    <footer className="pb-5 text-center">
       <p className="font-mono text-[15px] tracking-widest text-[#5C6F65]">
         Made by dev_anything_
       </p>

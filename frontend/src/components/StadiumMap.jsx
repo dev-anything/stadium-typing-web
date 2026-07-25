@@ -106,7 +106,7 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
         zoom={6}
         zoomControl={false}
         scrollWheelZoom={false} 
-        style={{ width: '80%', height: '300px' }}
+        style={{ width: '100%', height: '500px' }}
         className="w-full"
       >
         <TileLayer

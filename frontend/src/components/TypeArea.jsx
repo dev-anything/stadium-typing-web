@@ -160,7 +160,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
         style={{ imeMode: 'disabled' }}
         
       />
-      <div className="relative font-mono text-2xl leading-relaxed tracking-wide md:text-3xl">
+      <div className="relative font-mono text-10 leading-relaxed tracking-wide">
         <span className="whitespace-pre relative flex flex-wrap">
           {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
@@ -176,17 +176,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
             }
             return <span key={i} className={className}>{char}</span>
           })}
-          {/*{(() => {
-            const cursorCol = typed.length
-            if (cursorCol < 0 || cursorCol > stadiumName.length) return null
-            //if (cursorAtLineEnd) return null
-            return (
-              <span
-                className="absolute top-0 bottom-0 h-1 w-1.5 bg-blue-500 pointer-events-none"
-                style={{ bottom: `${cursorCol}ch` }}
-              />
-            )
-          })()}*/}
+          
           {(() => {
             const cursorCol = typed.length
             if (cursorCol < 0 || cursorCol > stadiumName.length) return null
