@@ -5,7 +5,6 @@ const ResultPage = () => {
   const location = useLocation();
   const resultTime = location.state.millis;
   const leagueUrl = location.state.league;
-  console.log(resultTime);
 
   const minutes = String(Math.floor(resultTime / 60000)).padStart(2, '0');
   const seconds = String(Math.floor((resultTime % 60000) / 1000)).padStart(2, '0');

@@ -18,35 +18,36 @@ const Stadium = () => {
     items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
   });
 
-  if (!current) return null;
-
+  
   useEffect(() => {
     const old = Date.now();
     const total = 6000;
-
+    
     const timer = setInterval(() => {
       const now = Date.now();
       const diff = now - old;
-
+      
       const remain = total - diff;
       const remainSec = Math.ceil(remain / 1000);
-
-      if (remainSec <= 0)
-      {
-        setTargetCount(0);
-        setIsCountdowning(false);
-        clearInterval(timer);
-      }
-      else
-      {
-        setTargetCount(remainSec);
-      }
       
-    }, 1000);
-  }, []);
+      if (remainSec <= 0)
+        {
+          setTargetCount(0);
+          setIsCountdowning(false);
+          clearInterval(timer);
+        }
+        else
+          {
+            setTargetCount(remainSec);
+          }
+          
+        }, 1000);
+      }, []);
+      
+  if (!current) return null;
 
   return (
-    <div className="flex flex-col items-center relative mt-10">
+    <div className="flex flex-col items-center relative mt-10 h-screen">
       <StadiumMap
         latitude={current.latitude}
         longitude={current.longitude}
