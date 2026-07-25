@@ -143,14 +143,15 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
   }
 
   return (
-    <div className="relative flex h-full w-full flex-col justify-center rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:w-1/2 md:p-10" onClick={() => inputRef.current?.focus()}>
-      <input
+    <div className="relative flex h-125 w-full flex-col justify-center rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:w-1/2 md:p-10" onClick={() => inputRef.current?.focus()}>
+      <span className="relative flex justify-center font-mono leading-relaxed tracking-wide">
+        <input
         ref={inputRef}
         type="text"
         onKeyDown={handleKeyDown}
         onCompositionStart={handleCompositionStart}
         onBlur={(e) => e.target.focus()}
-        className="absolute opacity-0 pointer-events-none"
+        className="absolute opacity-0 pointer-events-none inline"
         autoFocus
         lang="en"
         autoComplete="off"
@@ -158,10 +159,8 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
         autoCapitalize="off"
         spellCheck="false"
         style={{ imeMode: 'disabled' }}
-        
-      />
-      <div className="relative font-mono text-10 leading-relaxed tracking-wide">
-        <span className="whitespace-pre relative flex flex-wrap">
+        />
+        <span className="whitespace-pre relative inline justify-center">
           {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
             let className = "text-gray-500";
@@ -189,7 +188,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
             )
           })()}
         </span>
-      </div>
+      </span>
       {children}
     </div>
   );

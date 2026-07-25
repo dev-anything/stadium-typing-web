@@ -7,6 +7,7 @@ import useShuffle from "@hooks/useShuffle";
 import { allStadiums, stadiumsByLeague } from "@data";
 import Countdown from "@components/Countdown";
 import Stopwatch from "@components/Stopwatch";
+import Progress from "@components/Progress";
 
 
 const Stadium = () => {
@@ -64,8 +65,9 @@ const Stadium = () => {
       >
         <Countdown count={targetCount} />
         <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />
+        <Progress currentStage={currentStage} stage={stage}/>
       </TypeArea>
-      <div className="font-display">{`${currentStage} / ${stage}`}</div>
+      
       {/*{console.log(progress)}*/}
       
     </div>
