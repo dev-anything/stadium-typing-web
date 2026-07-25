@@ -100,24 +100,29 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
   }
 
   return (
-    <MapContainer
-      center={[latitude, longitude]}
-      zoom={6}
-      zoomControl={false}
-      scrollWheelZoom={false} 
-      style={{ width: '80%', height: '300px' }}
-      className="w-full"
-    >
-      <TileLayer
-        attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-      />
-      {/*<ZoomControl position="bottomright" />*/}
-      <MapUpdater latitude={latitude} longitude={longitude} />
-      <Marker position={[latitude, longitude]} icon={stadiumIcon}>
-        <Popup>{stadiumName}</Popup>
-      </Marker>
-    </MapContainer>
+    <div className="relative h-[40%] w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
+      <MapContainer
+        center={[latitude, longitude]}
+        zoom={6}
+        zoomControl={false}
+        scrollWheelZoom={false} 
+        style={{ width: '80%', height: '300px' }}
+        className="w-full"
+      >
+        <TileLayer
+          attribution='&copy; OpenStreetMap contributors &copy; CARTO'
+          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+        />
+        {/*<ZoomControl position="bottomright" />*/}
+        <MapUpdater latitude={latitude} longitude={longitude} />
+        <Marker position={[latitude, longitude]} icon={stadiumIcon}>
+          <Popup>{stadiumName}</Popup>
+        </Marker>
+        <div className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-[#0B1F17]/80 px-3 py-1 font-mono text-[10px] tracking-widest text-[#9CB0A6]">
+          NOW APPROACHING
+        </div>
+      </MapContainer>
+    </div>
   );
 
 }

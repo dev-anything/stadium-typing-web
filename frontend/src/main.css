@@ -139,5 +139,17 @@
 }
 
 @layer utilities {
-
+  .flip-tile-large {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 6rem;
+    background: linear-gradient(180deg, #16332470 0%, #0d2118 100%);
+    border: 1px solid #3ccb6f33;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transform-origin: top center;
+    animation: flipDown 0.5s cubic-bezier(.2,.9,.3,1) both;
+  }
 }

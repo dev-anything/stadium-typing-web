@@ -47,7 +47,7 @@ const Stadium = () => {
   if (!current) return null;
 
   return (
-    <div className="flex flex-col items-center relative mt-10 h-screen">
+    <div className="flex flex-col gap-4 overflow-hidden bg-[#0B1F17] p-4 text-[#F4F5F0] md:flex-row md:gap-6 md:p-6">
       <StadiumMap
         latitude={current.latitude}
         longitude={current.longitude}
@@ -61,11 +61,13 @@ const Stadium = () => {
         onBlocked={isCountdowning}
         millis={millis}
         leagueInfo={leagueInfo}
-      />
+      >
+        <Countdown count={targetCount} />
+        <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />
+      </TypeArea>
       <div className="font-display">{`${currentStage} / ${stage}`}</div>
       {/*{console.log(progress)}*/}
-      <Countdown count={targetCount} />
-      <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />
+      
     </div>
   )
 }

@@ -63,7 +63,7 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, millis, leagueInfo }) => {
+const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, millis, leagueInfo, children }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
@@ -143,7 +143,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
   }
 
   return (
-    <div className="border-3 flex justify-center align-middle p-4" onClick={() => inputRef.current?.focus()}>
+    <div className="relative flex h-full w-full flex-col justify-center rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:w-1/2 md:p-10" onClick={() => inputRef.current?.focus()}>
       <input
         ref={inputRef}
         type="text"
@@ -160,7 +160,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
         style={{ imeMode: 'disabled' }}
         
       />
-      <div className="font-mono text-[18px] p-2 rounded ">
+      <div className="relative font-mono text-2xl leading-relaxed tracking-wide md:text-3xl">
         <span className="whitespace-pre relative flex flex-wrap">
           {stadiumName.split('').map((char, i) => {
             const globalIdx = i;
@@ -193,13 +193,14 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
 
             return (
               <span
-                className="absolute bottom-0 h-0.5 w-[1ch] bg-blue-500 pointer-events-none"
+                className="absolute bottom-0 h-0.5 w-[1ch] bg-[#FFB454]"
                 style={{ left: `${cursorCol}ch` }}
               />
             )
           })()}
         </span>
       </div>
+      {children}
     </div>
   );
 }
