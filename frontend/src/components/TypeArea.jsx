@@ -144,6 +144,7 @@ const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, mil
         type="text"
         onKeyDown={handleKeyDown}
         onCompositionStart={handleCompositionStart}
+        onBlur={(e) => e.target.focus()}
         className="absolute opacity-0 pointer-events-none"
         autoFocus
         lang="en"
