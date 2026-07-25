@@ -1,9 +1,4 @@
-import { Link } from "react-router-dom";
-import Stadium from "@components/Stadium";
 import LeagueBtnSelector from "@components/LeagueBtnSelector";
-import Header from "@components/layout/Header";
-import Footer from "./layout/Footer";
-import ContentLayout from "./layout/ContentLayout";
 import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";
@@ -46,7 +41,8 @@ const LEAGUE = [
   { key: "saudi", label: "Saudi Pro League" },
   { key: "k1", label: "K League 1" },
   { key: "k2", label: "K League 2" },
-  { key: "random", label: "All Stadiums"}
+  { key: "mls", label: "Major League Soccer"},
+  //{ key: "random", label: "All Stadiums"}
 ]
 
 const Home = () => {

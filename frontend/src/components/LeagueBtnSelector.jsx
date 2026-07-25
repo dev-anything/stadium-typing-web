@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const LeagueBtnSelector = ({ isOpen, onClose, league }) => {
-  //console.log(league);
   if (!isOpen) return null;
 
   return (
@@ -22,7 +21,7 @@ const LeagueBtnSelector = ({ isOpen, onClose, league }) => {
               <Link
                 key={data.key}
                 to={`/play/${data.key}`}
-                className="font-display leaguebtnstyle"
+                className="font-display leaguebtnstyle text-center"
               >
                 {data.label}
               </Link>
