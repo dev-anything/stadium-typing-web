@@ -24,7 +24,7 @@ const Stadium = () => {
     target: current.stadium
   });
   //console.log(current.stadium);
-
+  console.log(typed);
   
   useEffect(() => {
     const old = Date.now();
@@ -68,6 +68,7 @@ const Stadium = () => {
         onBlocked={isCountdowning}
         millis={millis}
         leagueInfo={leagueInfo}
+        onHandleInput={handleInput}
       >
         <Countdown count={targetCount} />
         <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />

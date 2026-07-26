@@ -38,8 +38,8 @@ const useTypingStats = ({ target }) => {
     if (!startTime || isComplete) return;
 
     const interval = setInterval(() => {
-      setNow(Date.now(), 200);
-    });
+      setNow(Date.now());
+    }, 200);
 
     return () => clearInterval(interval);
   }, [startTime, isComplete]);
@@ -50,7 +50,7 @@ const useTypingStats = ({ target }) => {
     const elapsedMs = (isComplete ? Date.now() : now) - startTime;
     if (elapsedMs <= 0) return 0;
 
-    const minutes = elapseMs / 60000;
+    const minutes = elapsedMs / 60000;
     const words = typed.length / 5;
 
     return Math.round(words / minutes);

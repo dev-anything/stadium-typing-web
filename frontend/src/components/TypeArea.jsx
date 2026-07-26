@@ -63,11 +63,26 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onComplete, currentStage, stage, onBlocked, millis, leagueInfo, children }) => {
+const TypeArea = (
+    {
+      stadiumName,
+      onComplete,
+      currentStage,
+      stage,
+      onBlocked,
+      millis,
+      leagueInfo,
+      children,
+      onHandleInput
+    }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
   const navigate = useNavigate();
+
+  useEffect(() => {
+    onHandleInput(typed);
+  }, [typed, onHandleInput]);
 
   useEffect(() => {
     if (!stadiumName) return;
