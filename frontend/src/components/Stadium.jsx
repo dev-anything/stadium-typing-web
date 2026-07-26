@@ -8,6 +8,8 @@ import { allStadiums, stadiumsByLeague } from "@data";
 import Countdown from "@components/Countdown";
 import Stopwatch from "@components/Stopwatch";
 import Progress from "@components/Progress";
+import useTypingStats from "@hooks/useTypingStats";
+import StatDisplay from "@components/StatDisplay";
 
 
 const Stadium = () => {
@@ -18,6 +20,10 @@ const Stadium = () => {
   const { current, next, currentStage, stage } = useShuffle({
     items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
   });
+  const { typed, handleInput, isComplete, wpm, accuracy } = useTypingStats({
+    target: current.stadium
+  });
+  //console.log(current.stadium);
 
   
   useEffect(() => {
@@ -66,6 +72,9 @@ const Stadium = () => {
         <Countdown count={targetCount} />
         <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />
         <Progress currentStage={currentStage} stage={stage}/>
+
+        <StatDisplay wpm={wpm} accuracy={accuracy}/>
+        
       </TypeArea>
       
       {/*{console.log(progress)}*/}
