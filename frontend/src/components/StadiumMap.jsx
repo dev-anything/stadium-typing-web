@@ -111,7 +111,7 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
       >
         <TileLayer
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png"
         />
         {/*<ZoomControl position="bottomright" />*/}
         <MapUpdater latitude={latitude} longitude={longitude} />
