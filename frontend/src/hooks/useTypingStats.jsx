@@ -45,17 +45,18 @@ const useTypingStats = ({ target }) => {
   }, [startTime, isComplete]);
 
   const wpm = useMemo(() => {
-    if (!startTime) return 0;
+    if (!startTime || totalKeystrokes === 0) return 0;
 
     const elapsedMs = (isComplete ? Date.now() : now) - startTime;
     if (elapsedMs <= 0) return 0;
 
     const minutes = elapsedMs / 60000;
-    const words = typed.length / 5;
+    // 분자: 현재 단어 글자수가 아닌, 세션 전체 누적 키스트로크
+    const words = totalKeystrokes / 5;
 
     return Math.round(words / minutes);
 
-  }, [startTime, now, typed, isComplete]);
+  }, [startTime, now, totalKeystrokes, isComplete]);
 
 
   const accuracy = useMemo(() => {

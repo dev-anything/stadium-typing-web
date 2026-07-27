@@ -73,7 +73,9 @@ const TypeArea = (
       millis,
       leagueInfo,
       children,
-      onHandleInput
+      onHandleInput,
+      accuracy,
+      wpm
     }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
@@ -101,7 +103,9 @@ const TypeArea = (
         navigate("/result", {
           state: {
             millis: millis,
-            league: leagueInfo
+            league: leagueInfo,
+            accuracy: accuracy,
+            wpm: wpm
           }
         });
       }

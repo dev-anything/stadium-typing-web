@@ -69,6 +69,8 @@ const Stadium = () => {
         millis={millis}
         leagueInfo={leagueInfo}
         onHandleInput={handleInput}
+        accuracy={accuracy}
+        wpm={wpm}
       >
         <Countdown count={targetCount} />
         <Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />

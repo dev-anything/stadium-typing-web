@@ -5,6 +5,8 @@ const ResultPage = () => {
   const location = useLocation();
   const resultTime = location.state.millis;
   const leagueUrl = location.state.league;
+  const typingAccuracy = location.state.accuracy;
+  const averageWpm = location.state.wpm;
 
   const minutes = String(Math.floor(resultTime / 60000)).padStart(2, '0');
   const seconds = String(Math.floor((resultTime % 60000) / 1000)).padStart(2, '0');
@@ -15,6 +17,8 @@ const ResultPage = () => {
       Game END...
       <Link to="/">Go to Home</Link>
       <div>{minutes}:{seconds}:{milliSeconds}</div>
+      <div>{typingAccuracy}</div>
+      <div>{averageWpm}</div>
       <RestartBtn leagueUrl={leagueUrl} />
     </div>
   );
