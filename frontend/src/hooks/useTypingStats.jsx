@@ -1,10 +1,16 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+
+// 한 키 입력 사이의 최대 유효 간격 (이 이상은 쉬는 시간으로 간주, 누적치에 더하지 않음)
+const MAX_GAP_MS = 2000;
 
 const useTypingStats = ({ target }) => {
 
   const [typed, setTyped] = useState('');
-  const [startTime, setStartTime] = useState(null);
-  const [now, setNow] = useState(Date.now());
+
+  // 실제 타이핑한 시간의 누적치 (키 입력 사이의 간격을 cap 해서 더해간다)
+  const [activeTypingMs, setActiveTypingMs] = useState(0);
+  // 마지막 키 입력 시각 — ref 로 보관 (리렌더 트리거 X)
+  const lastKeystrokeRef = useRef(null);
 
   const [mistakeCount, setMistakeCount] = useState(0);
   const [totalKeystrokes, setTotalKeystrokes] = useState(0);
@@ -12,51 +18,60 @@ const useTypingStats = ({ target }) => {
   const isComplete = typed.length > 0 && typed === target;
 
   const handleInput = useCallback((value) => {
-    if (!startTime && value.length === 1)
-    {
-      setStartTime(Date.now());
+    // 빈 문자열은 TypeArea 가 단어 변경 시 보내는 신호 — lastKeystrokeRef 만 정리
+    if (value === '') {
+      setTyped('');
+      return;
     }
 
-    if (value.length > typed.length)
-    {
+    const now = Date.now();
+
+    // 이전 키 입력과의 시간 간격을 activeTypingMs 에 합산
+    // MAX_GAP_MS 초과분은 잘라내서 "쉬는 시간" 은 카운트하지 않음
+    if (lastKeystrokeRef.current !== null) {
+      const gap = now - lastKeystrokeRef.current;
+      const capped = Math.min(gap, MAX_GAP_MS);
+      setActiveTypingMs((prev) => prev + capped);
+    }
+    lastKeystrokeRef.current = now;
+
+    // 앞방향 입력만 카운트 (백스페이스는 카운트하지 않음)
+    if (value.length > typed.length) {
       const index = value.length - 1;
       const newChar = value[index];
       const expectedChar = target[index];
 
       setTotalKeystrokes((prev) => prev + 1);
 
-      if (newChar !== expectedChar)
-      {
+      if (newChar !== expectedChar) {
         setMistakeCount((prev) => prev + 1);
       }
     }
 
     setTyped(value);
-  }, [typed, target, startTime]);
+  }, [typed, target]);
 
+  // 단어 완료 시점: 마지막 키 입력과 완료 시점 사이의 시간도 합산
   useEffect(() => {
-    if (!startTime || isComplete) return;
-
-    const interval = setInterval(() => {
-      setNow(Date.now());
-    }, 200);
-
-    return () => clearInterval(interval);
-  }, [startTime, isComplete]);
+    if (isComplete && lastKeystrokeRef.current !== null) {
+      const now = Date.now();
+      const gap = now - lastKeystrokeRef.current;
+      const capped = Math.min(gap, MAX_GAP_MS);
+      setActiveTypingMs((prev) => prev + capped);
+      lastKeystrokeRef.current = null;
+    }
+  }, [isComplete]);
 
   const wpm = useMemo(() => {
-    if (!startTime || totalKeystrokes === 0) return 0;
+    if (totalKeystrokes === 0) return 0;
+    if (activeTypingMs <= 0) return 0;
 
-    const elapsedMs = (isComplete ? Date.now() : now) - startTime;
-    if (elapsedMs <= 0) return 0;
-
-    const minutes = elapsedMs / 60000;
-    // 분자: 현재 단어 글자수가 아닌, 세션 전체 누적 키스트로크
+    const minutes = activeTypingMs / 60000;
     const words = totalKeystrokes / 5;
 
     return Math.round(words / minutes);
 
-  }, [startTime, now, totalKeystrokes, isComplete]);
+  }, [totalKeystrokes, activeTypingMs]);
 
 
   const accuracy = useMemo(() => {
@@ -70,8 +85,8 @@ const useTypingStats = ({ target }) => {
 
   const reset = useCallback(() => {
     setTyped('');
-    setStartTime(null);
-    setNow(Date.now());
+    setActiveTypingMs(0);
+    lastKeystrokeRef.current = null;
     setMistakeCount(0);
     setTotalKeystrokes(0);
   }, []);
