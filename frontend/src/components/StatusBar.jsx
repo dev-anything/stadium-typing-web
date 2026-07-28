@@ -8,7 +8,7 @@ const StatusBar = ({ progress, stopwatch, statDisplay }) => {
       </div>
 
       {/* 스톱워치 + WPM + 정확도 — 오른쪽, 칩 3개 나열 */}
-      <div className="flex items-center gap-1.5">
+      <div className="flex gap-1.5">
         <div className="rounded-full bg-[#0B1F17]/60 px-3 py-1">
           {stopwatch}
         </div>

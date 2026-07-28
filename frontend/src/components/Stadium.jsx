@@ -38,18 +38,18 @@ const Stadium = () => {
       const remainSec = Math.ceil(remain / 1000);
       
       if (remainSec <= 0)
+      {
+        setTargetCount(0);
+        setIsCountdowning(false);
+        clearInterval(timer);
+      }
+      else
         {
-          setTargetCount(0);
-          setIsCountdowning(false);
-          clearInterval(timer);
+          setTargetCount(remainSec);
         }
-        else
-          {
-            setTargetCount(remainSec);
-          }
-          
-        }, 1000);
-      }, []);
+        
+      }, 1000);
+    }, []);
       
   if (!current) return null;
 

@@ -78,7 +78,6 @@ const TypeArea = (
       onHandleInput,
       accuracy,
       wpm,
-      countdown,
       stopwatch,
       progress,
       statDisplay

@@ -23,12 +23,10 @@ const Stopwatch = ({ onWaiting, setMillis, millis }) => {
   
 
   return (
-    <div className="absolute font-display left-1/2 -translate-x-1/2 top-4 flex items-center gap-1.5 rounded-full border border-[#3CCB6F1f] bg-[#0B1F17]/70 px-3 py-1">
-      <span className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-[#3CCB6F]" />
-      <span className="text-sm tabular-nums text-[#F4F5F0]">
-        {minutes}:{seconds}:{milliSeconds}
-      </span>
-    </div>
+    <span className="flex items-center gap-1.5 font-mono text-xs tabular-nums text-[#F4F5F0]">
+      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#FFB454]" />
+      {minutes}:{seconds}:{milliSeconds}
+    </span>
     
   );
 }
