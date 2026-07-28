@@ -54,7 +54,8 @@ const Stadium = () => {
   if (!current) return null;
 
   return (
-    <div className="relative flex gap-4 overflow-hidden h-140 bg-[#0B1F17] p-4 text-[#F4F5F0] md:flex-row md:gap-6 md:p-6">
+    <div className="relative h-[80%] w-full overflow-hidden rounded-2xl">
+    {/*<div className="relative flex gap-4 overflow-hidden h-140 bg-[#0B1F17] p-4 text-[#F4F5F0] md:flex-row md:gap-6 md:p-6">*/}
       <StadiumMap
         latitude={current.latitude}
         longitude={current.longitude}
@@ -71,11 +72,13 @@ const Stadium = () => {
         onHandleInput={handleInput}
         accuracy={accuracy}
         wpm={wpm}
-        countdown={<Countdown count={targetCount} />}
+        
         stopwatch={<Stopwatch onWaiting={isCountdowning} setMillis={setMillis} millis={millis} />}
         progress={<Progress currentStage={currentStage} stage={stage}/>}
         statDisplay={<StatDisplay wpm={wpm} accuracy={accuracy}/>}
       />
+
+      <Countdown isActive={isCountdowning} count={targetCount} />
 
     </div>
   )

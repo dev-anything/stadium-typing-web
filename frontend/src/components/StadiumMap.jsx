@@ -100,7 +100,8 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
   }
 
   return (
-    <div className="relative h-full w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
+    //<div className="relative h-full w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
+    <div className="absolute inset-0">
       <MapContainer
         center={[latitude, longitude]}
         zoom={6}

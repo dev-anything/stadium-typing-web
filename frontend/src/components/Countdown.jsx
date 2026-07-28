@@ -2,7 +2,7 @@ const Countdown = ({ count }) => {
   return (
     <div className={
       count ?
-        "absolute inset-0 z-50 flex items-center justify-center rounded-2xl bg-[#0B1F17]/90 backdrop-blur-sm"
+        "absolute inset-0 z-1000 flex items-center justify-center rounded-2xl bg-[#0B1F17]/90 backdrop-blur-sm"
         :
         "hidden"
     }>
