@@ -4,7 +4,7 @@ const HeroCard = ({ heroword }) => {
   let letterIndex = 0;
   
   return (
-    <main className="px-6 pb-10 sm:pt-20">
+    <main className="px-6 pb-10">
         <div className="flip-stage flex flex-wrap items-end justify-center gap-x-3 gap-y-2">
           {heroword.map((word, wi) => (
             <div key={wi} className="flex">
@@ -23,50 +23,6 @@ const HeroCard = ({ heroword }) => {
               })}
             </div>
           ))}
-        
-
-
-          {/*{heroword.map((word, wi) => (
-
-            wi < 2 ?
-              <div key={wi} className>
-              {word.split("").map((char, ci) => {
-                const delay = letterIndex * 0.06;
-                letterIndex += 1;
-                return (
-                  <span
-                    key={ci}
-                    className="flip-tile font-display text-2xl font-bold text-[#FFB454] sm:text-4xl"
-                    style={{ animationDelay: `${delay}s` }}
-                  >
-                    {char}
-                  </span>
-                );
-              })}
-              </div>
-
-              :
-
-              //<br>
-              <div key={wi} className="flex items-center justify-center col-span-2">
-              {word.split("").map((char, ci) => {
-                const delay = letterIndex * 0.06;
-                letterIndex += 1;
-                return (
-                  <span
-                    key={ci}
-                    className="flip-tile font-display text-2xl font-bold text-[#FFB454] sm:text-4xl"
-                    style={{ animationDelay: `${delay}s` }}
-                  >
-                    {char}
-                  </span>
-                );
-              })}
-              </div>
-
-
-            
-          ))}*/}
         </div>
 
         <p className="font-body mx-auto mt-8 max-w-md text-center text-sm leading-relaxed text-[#9CB0A6]">

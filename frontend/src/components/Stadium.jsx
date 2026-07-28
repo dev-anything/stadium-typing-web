@@ -23,8 +23,6 @@ const Stadium = () => {
   const { typed, handleInput, isComplete, wpm, accuracy } = useTypingStats({
     target: current.stadium
   });
-  //console.log(current.stadium);
-  console.log(typed);
   
   useEffect(() => {
     const old = Date.now();
