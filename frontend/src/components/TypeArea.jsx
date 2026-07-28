@@ -75,7 +75,11 @@ const TypeArea = (
       children,
       onHandleInput,
       accuracy,
-      wpm
+      wpm,
+      countdown,
+      stopwatch,
+      progress,
+      statDisplay
     }) => {
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
@@ -161,56 +165,121 @@ const TypeArea = (
     e.preventDefault()
   }
 
-  return (
-    <div className="relative flex h-125 w-full flex-col justify-center rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:w-1/2 md:p-10" onClick={() => inputRef.current?.focus()}>
-      <span className="relative flex justify-center font-mono leading-relaxed tracking-wide">
-        <input
-        ref={inputRef}
-        type="text"
-        onKeyDown={handleKeyDown}
-        onCompositionStart={handleCompositionStart}
-        onBlur={(e) => e.target.focus()}
-        className="absolute opacity-0 pointer-events-none inline"
-        autoFocus
-        lang="en"
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck="false"
-        style={{ imeMode: 'disabled' }}
-        />
-        <span className="whitespace-pre relative inline justify-center">
-          {stadiumName.split('').map((char, i) => {
-            const globalIdx = i;
-            let className = "text-gray-500";
+  //return (
+  //  <div className="relative flex h-125 w-full flex-col justify-center rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:w-1/2 md:p-10" onClick={() => inputRef.current?.focus()}>
+  //    <span className="relative flex justify-center font-mono leading-relaxed tracking-wide">
+  //      <input
+  //      ref={inputRef}
+  //      type="text"
+  //      onKeyDown={handleKeyDown}
+  //      onCompositionStart={handleCompositionStart}
+  //      onBlur={(e) => e.target.focus()}
+  //      className="absolute opacity-0 pointer-events-none inline"
+  //      autoFocus
+  //      lang="en"
+  //      autoComplete="off"
+  //      autoCorrect="off"
+  //      autoCapitalize="off"
+  //      spellCheck="false"
+  //      style={{ imeMode: 'disabled' }}
+  //      />
+  //      <span className="whitespace-pre relative inline justify-center">
+  //        {stadiumName.split('').map((char, i) => {
+  //          const globalIdx = i;
+  //          let className = "text-gray-500";
 
-            if (globalIdx < typed.length)
-            {
-              className = typed[globalIdx] === char
-                ?
-                "text-white"
-                :
-                "text-red-500 bg-red-100"
-            }
-            return <span key={i} className={className}>{char}</span>
-          })}
+  //          if (globalIdx < typed.length)
+  //          {
+  //            className = typed[globalIdx] === char
+  //              ?
+  //              "text-white"
+  //              :
+  //              "text-red-500 bg-red-100"
+  //          }
+  //          return <span key={i} className={className}>{char}</span>
+  //        })}
           
-          {(() => {
-            const cursorCol = typed.length
-            if (cursorCol < 0 || cursorCol > stadiumName.length) return null
+  //        {(() => {
+  //          const cursorCol = typed.length
+  //          if (cursorCol < 0 || cursorCol > stadiumName.length) return null
+
+  //          return (
+  //            <span
+  //              className="absolute bottom-0 h-0.5 w-[1ch] bg-[#FFB454]"
+  //              style={{ left: `${cursorCol}ch` }}
+  //            />
+  //          )
+  //        })()}
+  //      </span>
+  //    </span>
+  //  </div>
+  //);
+
+  return (
+    <div className="relative flex h-full w-full flex-col rounded-2xl border border-[#3CCB6F1f] bg-[#0d2118] p-6 md:p-8">
+
+      {/* 상단 바: Progress(좌) + Stopwatch/StatDisplay(우) */}
+      <div className="flex items-center justify-between">
+        {progress}
+
+        <div className="flex items-center gap-3">
+          {stopwatch}
+          <span className="h-3 w-px bg-[#3CCB6F1f]" />
+          {statDisplay}
+        </div>
+      </div>
+
+      {/* 타이핑 본문 */}
+      <div className="flex flex-1 items-center justify-center">
+        <div className="relative select-none font-mono leading-relaxed tracking-wide text-[#F4F5F0] md:text-[20px]">
+          {stadiumName.split("").map((char, i) => {
+            const status =
+              i >= typed.length ? "pending" : typed[i] === char ? "correct" : "incorrect"
 
             return (
               <span
-                className="absolute bottom-0 h-0.5 w-[1ch] bg-[#FFB454]"
-                style={{ left: `${cursorCol}ch` }}
-              />
+                key={i}
+                className={
+                  status === "correct"
+                    ? "text-[#3CCB6F]"
+                    : status === "incorrect"
+                    ? "bg-[#FF6B6B33] text-[#FF6B6B]"
+                    : "text-[#5C6F65]"
+                }
+              >
+                {char}
+              </span>
             )
-          })()}
-        </span>
-      </span>
-      {children}
+          })}
+
+          <span
+            className="absolute top-0 bottom-0 h-0.5 w-[1ch] bg-[#FFB454]"
+            style={{ left: `${typed.length}ch` }}
+          />
+        </div>
+
+        <input
+          ref={inputRef}
+          type="text"
+          onKeyDown={handleKeyDown}
+          onCompositionStart={handleCompositionStart}
+          onBlur={(e) => e.target.focus()}
+          className="absolute opacity-0 pointer-events-none inline"
+          autoFocus
+          lang="en"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
+          style={{ imeMode: 'disabled' }}
+          />
+      </div>
+
+      {/* Countdown 오버레이 (자체적으로 absolute inset-0을 갖고 있다고 가정) */}
+      {countdown}
     </div>
   );
+
 }
 
 export default TypeArea;

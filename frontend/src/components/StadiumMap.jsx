@@ -100,13 +100,13 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
   }
 
   return (
-    <div className="relative h-[40%] w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
+    <div className="relative h-full w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
       <MapContainer
         center={[latitude, longitude]}
         zoom={6}
         zoomControl={false}
         scrollWheelZoom={false} 
-        style={{ width: '100%', height: '500px' }}
+        style={{ width: '100%', height: '100%' }}
         className="w-full"
       >
         <TileLayer
