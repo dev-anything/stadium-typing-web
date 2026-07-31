@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kl1-001",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "FC Seoul",
+    "stadium": "Seoul World Cup Stadium",
+    "location": "Seoul",
+    "latitude": 37.5683,
+    "longitude": 126.8972
+  },
+  {
+    "id": "kl1-002",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Gangwon FC",
+    "stadium": "Gangneung Stadium",
+    "location": "Gangneung, Gangwon-do",
+    "latitude": 37.7733,
+    "longitude": 128.8972
+  },
+  {
+    "id": "kl1-003",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Jeonbuk Hyundai Motors FC",
+    "stadium": "Jeonju World Cup Stadium",
+    "location": "Jeonju, Jeollabuk-do",
+    "latitude": 35.8698,
+    "longitude": 127.0642
+  },
+  {
+    "id": "kl1-004",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Ulsan HD FC",
+    "stadium": "Ulsan Munsu Football Stadium",
+    "location": "Ulsan",
+    "latitude": 35.5353,
+    "longitude": 129.2595
+  },
+  {
+    "id": "kl1-005",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Pohang Steelers",
+    "stadium": "Pohang Steel Yard",
+    "location": "Pohang, Gyeongsangbuk-do",
+    "latitude": 36.0025,
+    "longitude": 129.3847
+  },
+  {
+    "id": "kl1-006",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "FC Anyang",
+    "stadium": "Anyang Stadium",
+    "location": "Anyang, Gyeonggi-do",
+    "latitude": 37.4042,
+    "longitude": 126.9536
+  },
+  {
+    "id": "kl1-007",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Incheon United FC",
+    "stadium": "Incheon Football Stadium",
+    "location": "Incheon",
+    "latitude": 37.4661,
+    "longitude": 126.6433
+  },
+  {
+    "id": "kl1-008",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Jeju SK FC",
+    "stadium": "Jeju World Cup Stadium",
+    "location": "Seogwipo, Jeju-do",
+    "latitude": 33.2462,
+    "longitude": 126.5093
+  },
+  {
+    "id": "kl1-009",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Daejeon Hana Citizen",
+    "stadium": "Daejeon World Cup Stadium",
+    "location": "Daejeon",
+    "latitude": 36.3681,
+    "longitude": 127.3258
+  },
+  {
+    "id": "kl1-010",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Bucheon FC 1995",
+    "stadium": "Bucheon Stadium",
+    "location": "Bucheon, Gyeonggi-do",
+    "latitude": 37.5028,
+    "longitude": 126.7972
+  },
+  {
+    "id": "kl1-011",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Gimcheon Sangmu FC",
+    "stadium": "Gimcheon Stadium",
+    "location": "Gimcheon, Gyeongsangbuk-do",
+    "latitude": 36.1389,
+    "longitude": 128.1067
+  },
+  {
+    "id": "kl1-012",
+    "tier": 1,
+    "league": "K League 1",
+    "club": "Gwangju FC",
+    "stadium": "Gwangju Football Stadium",
+    "location": "Gwangju",
+    "latitude": 35.1328,
+    "longitude": 126.8731
+  }
+]

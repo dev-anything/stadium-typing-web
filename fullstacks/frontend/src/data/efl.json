@@ -1,0 +1,218 @@
+[
+  {
+    "id": "champ-001",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Birmingham City",
+    "stadium": "St Andrew's",
+    "latitude": 52.4757,
+    "longitude": -1.8682
+  },
+  {
+    "id": "champ-002",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Blackburn Rovers",
+    "stadium": "Ewood Park",
+    "latitude": 53.7286,
+    "longitude": -2.4892
+  },
+  {
+    "id": "champ-003",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Bristol City",
+    "stadium": "Ashton Gate Stadium",
+    "latitude": 51.4400,
+    "longitude": -2.6203
+  },
+  {
+    "id": "champ-004",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Charlton Athletic",
+    "stadium": "The Valley",
+    "latitude": 51.4864,
+    "longitude": 0.0353
+  },
+  {
+    "id": "champ-005",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Coventry City",
+    "stadium": "Coventry Building Society Arena",
+    "latitude": 52.4481,
+    "longitude": -1.4956
+  },
+  {
+    "id": "champ-006",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Derby County",
+    "stadium": "Pride Park Stadium",
+    "latitude": 52.9149,
+    "longitude": -1.4472
+  },
+  {
+    "id": "champ-007",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Hull City",
+    "stadium": "MKM Stadium",
+    "latitude": 53.7461,
+    "longitude": -0.3678
+  },
+  {
+    "id": "champ-008",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Ipswich Town",
+    "stadium": "Portman Road",
+    "latitude": 52.0547,
+    "longitude": 1.1448
+  },
+  {
+    "id": "champ-009",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Leicester City",
+    "stadium": "King Power Stadium",
+    "latitude": 52.6203,
+    "longitude": -1.1422
+  },
+  {
+    "id": "champ-010",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Middlesbrough",
+    "stadium": "Riverside Stadium",
+    "latitude": 54.5783,
+    "longitude": -1.2169
+  },
+  {
+    "id": "champ-011",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Millwall",
+    "stadium": "The Den",
+    "latitude": 51.4859,
+    "longitude": -0.0507
+  },
+  {
+    "id": "champ-012",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Norwich City",
+    "stadium": "Carrow Road",
+    "latitude": 52.6221,
+    "longitude": 1.3092
+  },
+  {
+    "id": "champ-013",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Oxford United",
+    "stadium": "Kassam Stadium",
+    "latitude": 51.7164,
+    "longitude": -1.2078
+  },
+  {
+    "id": "champ-014",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Portsmouth",
+    "stadium": "Fratton Park",
+    "latitude": 50.7964,
+    "longitude": -1.0639
+  },
+  {
+    "id": "champ-015",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Preston North End",
+    "stadium": "Deepdale",
+    "latitude": 53.7722,
+    "longitude": -2.6883
+  },
+  {
+    "id": "champ-016",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Queens Park Rangers",
+    "stadium": "Loftus Road",
+    "latitude": 51.5093,
+    "longitude": -0.2322
+  },
+  {
+    "id": "champ-017",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Sheffield United",
+    "stadium": "Bramall Lane",
+    "latitude": 53.3703,
+    "longitude": -1.4708
+  },
+  {
+    "id": "champ-018",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Sheffield Wednesday",
+    "stadium": "Hillsborough Stadium",
+    "latitude": 53.4114,
+    "longitude": -1.5006
+  },
+  {
+    "id": "champ-019",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Southampton",
+    "stadium": "St Mary's Stadium",
+    "latitude": 50.9058,
+    "longitude": -1.3911
+  },
+  {
+    "id": "champ-020",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Stoke City",
+    "stadium": "bet365 Stadium",
+    "latitude": 52.9883,
+    "longitude": -2.1756
+  },
+  {
+    "id": "champ-021",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Swansea City",
+    "stadium": "Swansea.com Stadium",
+    "latitude": 51.6428,
+    "longitude": -3.9350
+  },
+  {
+    "id": "champ-022",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Watford",
+    "stadium": "Vicarage Road",
+    "latitude": 51.6498,
+    "longitude": -0.4015
+  },
+  {
+    "id": "champ-023",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "West Bromwich Albion",
+    "stadium": "The Hawthorns",
+    "latitude": 52.5091,
+    "longitude": -1.9639
+  },
+  {
+    "id": "champ-024",
+    "tier": 2,
+    "league": "EFL Championship",
+    "club": "Wrexham",
+    "stadium": "Racecourse Ground",
+    "latitude": 53.0519,
+    "longitude": -3.0033
+  }
+]

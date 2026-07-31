@@ -1,0 +1,146 @@
+[
+  {
+    "id": "por-001",
+    "league": "Liga Portugal",
+    "club": "AVS Futebol SAD",
+    "stadium": "Estadio do CD Aves",
+    "latitude": 41.3600,
+    "longitude": -8.4089
+  },
+  {
+    "id": "por-002",
+    "league": "Liga Portugal",
+    "club": "Casa Pia AC",
+    "stadium": "Estadio Municipal de Rio Maior",
+    "latitude": 39.3361,
+    "longitude": -8.9367
+  },
+  {
+    "id": "por-003",
+    "league": "Liga Portugal",
+    "club": "CD Santa Clara",
+    "stadium": "Estadio de Sao Miguel",
+    "latitude": 37.7444,
+    "longitude": -25.6881
+  },
+  {
+    "id": "por-004",
+    "league": "Liga Portugal",
+    "club": "Estrela da Amadora",
+    "stadium": "Estadio Jose Gomes",
+    "latitude": 38.7561,
+    "longitude": -9.2369
+  },
+  {
+    "id": "por-005",
+    "league": "Liga Portugal",
+    "club": "FC Arouca",
+    "stadium": "Estadio Municipal de Arouca",
+    "latitude": 40.9328,
+    "longitude": -8.2464
+  },
+  {
+    "id": "por-006",
+    "league": "Liga Portugal",
+    "club": "FC Famalicao",
+    "stadium": "Estadio Municipal 22 de Junho",
+    "latitude": 41.4117,
+    "longitude": -8.5208
+  },
+  {
+    "id": "por-007",
+    "league": "Liga Portugal",
+    "club": "FC Porto",
+    "stadium": "Estadio do Dragao",
+    "latitude": 41.1617,
+    "longitude": -8.5836
+  },
+  {
+    "id": "por-008",
+    "league": "Liga Portugal",
+    "club": "Gil Vicente FC",
+    "stadium": "Estadio Cidade de Barcelos",
+    "latitude": 41.5475,
+    "longitude": -8.6289
+  },
+  {
+    "id": "por-009",
+    "league": "Liga Portugal",
+    "club": "GD Estoril Praia",
+    "stadium": "Estadio Antonio Coimbra da Mota",
+    "latitude": 38.7119,
+    "longitude": -9.3986
+  },
+  {
+    "id": "por-010",
+    "league": "Liga Portugal",
+    "club": "Moreirense FC",
+    "stadium": "Parque de Jogos Comendador Joaquim de Almeida Freitas",
+    "latitude": 41.3814,
+    "longitude": -8.3533
+  },
+  {
+    "id": "por-011",
+    "league": "Liga Portugal",
+    "club": "Nacional da Madeira",
+    "stadium": "Estadio da Madeira",
+    "latitude": 32.6586,
+    "longitude": -16.8833
+  },
+  {
+    "id": "por-012",
+    "league": "Liga Portugal",
+    "club": "Rio Ave FC",
+    "stadium": "Estadio dos Arcos",
+    "latitude": 41.3653,
+    "longitude": -8.7428
+  },
+  {
+    "id": "por-013",
+    "league": "Liga Portugal",
+    "club": "SC Braga",
+    "stadium": "Estadio Municipal de Braga",
+    "latitude": 41.5622,
+    "longitude": -8.4297
+  },
+  {
+    "id": "por-014",
+    "league": "Liga Portugal",
+    "club": "SC Farense",
+    "stadium": "Estadio de Sao Luis",
+    "latitude": 37.0225,
+    "longitude": -7.9317
+  },
+  {
+    "id": "por-015",
+    "league": "Liga Portugal",
+    "club": "SL Benfica",
+    "stadium": "Estadio da Luz",
+    "latitude": 38.7527,
+    "longitude": -9.1847
+  },
+  {
+    "id": "por-016",
+    "league": "Liga Portugal",
+    "club": "Sporting CP",
+    "stadium": "Estadio Jose Alvalade",
+    "latitude": 38.7612,
+    "longitude": -9.1608
+  },
+  {
+    "id": "por-017",
+    "league": "Liga Portugal",
+    "club": "Vitoria SC",
+    "stadium": "Estadio D. Afonso Henriques",
+    "latitude": 41.4447,
+    "longitude": -8.3014
+  },
+  {
+    "id": "por-018",
+    "league": "Liga Portugal",
+    "club": "Boavista FC",
+    "stadium": "Estadio do Bessa Seculo XXI",
+    "latitude": 41.1611,
+    "longitude": -8.6431
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "kl2-001",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Busan IPark",
+    "stadium": "Busan Gudeok Stadium",
+    "location": "Busan",
+    "latitude": 35.1169,
+    "longitude": 129.0178
+  },
+  {
+    "id": "kl2-002",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Suwon Samsung Bluewings",
+    "stadium": "Suwon World Cup Stadium",
+    "location": "Suwon, Gyeonggi-do",
+    "latitude": 37.2863,
+    "longitude": 127.0369
+  },
+  {
+    "id": "kl2-003",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Daegu FC",
+    "stadium": "iM Bank Park",
+    "location": "Daegu",
+    "latitude": 35.8811,
+    "longitude": 128.5881
+  },
+  {
+    "id": "kl2-004",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Suwon FC",
+    "stadium": "Suwon Sports Complex",
+    "location": "Suwon, Gyeonggi-do",
+    "latitude": 37.2978,
+    "longitude": 127.0114
+  },
+  {
+    "id": "kl2-005",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Seoul E-Land FC",
+    "stadium": "Mokdong Stadium",
+    "location": "Seoul",
+    "latitude": 37.5303,
+    "longitude": 126.8778
+  },
+  {
+    "id": "kl2-006",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Hwaseong FC",
+    "stadium": "Hwaseong Sports Complex",
+    "location": "Hwaseong, Gyeonggi-do",
+    "latitude": 37.1353,
+    "longitude": 126.9242
+  },
+  {
+    "id": "kl2-007",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Chungnam Asan FC",
+    "stadium": "Yi Sun-sin Stadium",
+    "location": "Asan, Chungcheongnam-do",
+    "latitude": 36.7761,
+    "longitude": 127.0253
+  },
+  {
+    "id": "kl2-008",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Gimpo FC",
+    "stadium": "Gimpo Solteo Football Field",
+    "location": "Gimpo, Gyeonggi-do",
+    "latitude": 37.6483,
+    "longitude": 126.6394
+  },
+  {
+    "id": "kl2-009",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Gyeongnam FC",
+    "stadium": "Changwon Football Center",
+    "location": "Changwon, Gyeongsangnam-do",
+    "latitude": 35.2236,
+    "longitude": 128.6978
+  },
+  {
+    "id": "kl2-010",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Cheonan City FC",
+    "stadium": "Cheonan Stadium",
+    "location": "Cheonan, Chungcheongnam-do",
+    "latitude": 36.8122,
+    "longitude": 127.1186
+  },
+  {
+    "id": "kl2-011",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Seongnam FC",
+    "stadium": "Tancheon Sports Complex",
+    "location": "Seongnam, Gyeonggi-do",
+    "latitude": 37.4089,
+    "longitude": 127.1264
+  },
+  {
+    "id": "kl2-012",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Yongin FC",
+    "stadium": "Yongin Mireu Stadium",
+    "location": "Yongin, Gyeonggi-do",
+    "latitude": 37.2436,
+    "longitude": 127.1772
+  },
+  {
+    "id": "kl2-013",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Paju Frontier FC",
+    "stadium": "Paju Stadium",
+    "location": "Paju, Gyeonggi-do",
+    "latitude": 37.7533,
+    "longitude": 126.7761
+  },
+  {
+    "id": "kl2-014",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Chungbuk Cheongju FC",
+    "stadium": "Cheongju Stadium",
+    "location": "Cheongju, Chungcheongbuk-do",
+    "latitude": 36.6347,
+    "longitude": 127.4725
+  },
+  {
+    "id": "kl2-015",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Ansan Greeners FC",
+    "stadium": "Ansan Wa~ Stadium",
+    "location": "Ansan, Gyeonggi-do",
+    "latitude": 37.3197,
+    "longitude": 126.8186
+  },
+  {
+    "id": "kl2-016",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Jeonnam Dragons",
+    "stadium": "Gwangyang Football Stadium",
+    "location": "Gwangyang, Jeollanam-do",
+    "latitude": 34.9353,
+    "longitude": 127.6908
+  },
+  {
+    "id": "kl2-017",
+    "tier": 2,
+    "league": "K League 2",
+    "club": "Gimhae FC",
+    "stadium": "Gimhae Stadium",
+    "location": "Gimhae, Gyeongsangnam-do",
+    "latitude": 35.2442,
+    "longitude": 128.8789
+  }
+]
