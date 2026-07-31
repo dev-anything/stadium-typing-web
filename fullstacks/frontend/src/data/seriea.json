@@ -1,22 +1,25 @@
 [
   {
     "id": "sea-001",
+    "tier": 1,
     "league": "Serie A",
     "club": "AC Milan",
     "stadium": "San Siro",
     "latitude": 45.4781,
-    "longitude": 9.1240
+    "longitude": 9.124
   },
   {
     "id": "sea-002",
+    "tier": 1,
     "league": "Serie A",
     "club": "Inter Milan",
     "stadium": "Stadio Giuseppe Meazza",
     "latitude": 45.4781,
-    "longitude": 9.1240
+    "longitude": 9.124
   },
   {
     "id": "sea-003",
+    "tier": 1,
     "league": "Serie A",
     "club": "Juventus FC",
     "stadium": "Allianz Stadium",
@@ -25,6 +28,7 @@
   },
   {
     "id": "sea-004",
+    "tier": 1,
     "league": "Serie A",
     "club": "AS Roma",
     "stadium": "Stadio Olimpico",
@@ -33,6 +37,7 @@
   },
   {
     "id": "sea-005",
+    "tier": 1,
     "league": "Serie A",
     "club": "SS Lazio",
     "stadium": "Stadio Olimpico",
@@ -41,14 +46,16 @@
   },
   {
     "id": "sea-006",
+    "tier": 1,
     "league": "Serie A",
     "club": "SSC Napoli",
     "stadium": "Stadio Diego Armando Maradona",
     "latitude": 40.8279,
-    "longitude": 14.1930
+    "longitude": 14.193
   },
   {
     "id": "sea-007",
+    "tier": 1,
     "league": "Serie A",
     "club": "Atalanta BC",
     "stadium": "Gewiss Stadium",
@@ -57,6 +64,7 @@
   },
   {
     "id": "sea-008",
+    "tier": 1,
     "league": "Serie A",
     "club": "ACF Fiorentina",
     "stadium": "Stadio Artemio Franchi",
@@ -65,6 +73,7 @@
   },
   {
     "id": "sea-009",
+    "tier": 1,
     "league": "Serie A",
     "club": "Bologna FC 1909",
     "stadium": "Stadio Renato Dall'Ara",
@@ -73,14 +82,16 @@
   },
   {
     "id": "sea-010",
+    "tier": 1,
     "league": "Serie A",
     "club": "Torino FC",
     "stadium": "Stadio Olimpico Grande Torino",
     "latitude": 45.0422,
-    "longitude": 7.6500
+    "longitude": 7.65
   },
   {
     "id": "sea-011",
+    "tier": 1,
     "league": "Serie A",
     "club": "Udinese Calcio",
     "stadium": "Bluenergy Stadium",
@@ -89,6 +100,7 @@
   },
   {
     "id": "sea-012",
+    "tier": 1,
     "league": "Serie A",
     "club": "Genoa CFC",
     "stadium": "Stadio Luigi Ferraris",
@@ -97,6 +109,7 @@
   },
   {
     "id": "sea-013",
+    "tier": 1,
     "league": "Serie A",
     "club": "US Lecce",
     "stadium": "Stadio Via del Mare",
@@ -105,14 +118,7 @@
   },
   {
     "id": "sea-014",
-    "league": "Serie A",
-    "club": "Hellas Verona",
-    "stadium": "Stadio Marcantonio Bentegodi",
-    "latitude": 45.4353,
-    "longitude": 10.9686
-  },
-  {
-    "id": "sea-015",
+    "tier": 1,
     "league": "Serie A",
     "club": "Cagliari Calcio",
     "stadium": "Unipol Domus",
@@ -120,15 +126,8 @@
     "longitude": 9.1361
   },
   {
-    "id": "sea-016",
-    "league": "Serie A",
-    "club": "Empoli FC",
-    "stadium": "Stadio Carlo Castellani",
-    "latitude": 43.7264,
-    "longitude": 10.9550
-  },
-  {
-    "id": "sea-017",
+    "id": "sea-015",
+    "tier": 1,
     "league": "Serie A",
     "club": "Parma Calcio 1913",
     "stadium": "Stadio Ennio Tardini",
@@ -136,7 +135,8 @@
     "longitude": 10.3383
   },
   {
-    "id": "sea-018",
+    "id": "sea-016",
+    "tier": 1,
     "league": "Serie A",
     "club": "Como 1907",
     "stadium": "Stadio Giuseppe Sinigaglia",
@@ -144,19 +144,39 @@
     "longitude": 9.0739
   },
   {
-    "id": "sea-019",
+    "id": "sea-017",
+    "tier": 1,
     "league": "Serie A",
-    "club": "AC Monza",
-    "stadium": "U-Power Stadium",
-    "latitude": 45.5828,
-    "longitude": 9.2817
+    "club": "US Sassuolo Calcio",
+    "stadium": "Mapei Stadium – Citta del Tricolore",
+    "latitude": 44.7147,
+    "longitude": 10.6497
   },
   {
-    "id": "sea-020",
+    "id": "sea-018",
+    "tier": 1,
     "league": "Serie A",
     "club": "Venezia FC",
     "stadium": "Stadio Pier Luigi Penzo",
     "latitude": 45.4264,
     "longitude": 12.3619
+  },
+  {
+    "id": "sea-019",
+    "tier": 1,
+    "league": "Serie A",
+    "club": "Frosinone Calcio",
+    "stadium": "Stadio Benito Stirpe",
+    "latitude": 41.6347,
+    "longitude": 13.3258
+  },
+  {
+    "id": "sea-020",
+    "tier": 1,
+    "league": "Serie A",
+    "club": "AC Monza",
+    "stadium": "U-Power Stadium",
+    "latitude": 45.5828,
+    "longitude": 9.2817
   }
 ]

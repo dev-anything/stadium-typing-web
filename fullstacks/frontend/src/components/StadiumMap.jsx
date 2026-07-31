@@ -58,7 +58,7 @@ const stadiumIcon = L.divIcon({
           top: 0; left: 50%;
           transform: translateX(-50%);
           width: 24px; height: 24px;
-          background: #FFB454;
+          background: #000000;
           border-radius: 50%;
           //border: 2px solid #0B1F17;
           box-shadow: 0 2px 6px rgba(0,0,0,0.4);
@@ -71,7 +71,7 @@ const stadiumIcon = L.divIcon({
           width: 0; height: 0;
           border-left: 6px solid transparent;
           border-right: 6px solid transparent;
-          border-top: 16px solid #FFB454;
+          border-top: 16px solid #000000;
         "></div>
       </div>
     `,
@@ -104,7 +104,7 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
     <div className="absolute inset-0">
       <MapContainer
         center={[latitude, longitude]}
-        zoom={6}
+        zoom={7}
         zoomControl={false}
         scrollWheelZoom={false} 
         style={{ width: '100%', height: '100%' }}

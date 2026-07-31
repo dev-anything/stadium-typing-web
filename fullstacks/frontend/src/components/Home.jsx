@@ -2,6 +2,7 @@ import LeagueBtnSelector from "@components/LeagueBtnSelector";
 import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";
+import StackSheet from "@components/StackSheet";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 
@@ -39,9 +40,10 @@ const LEAGUE = [
   { key: "eredivisie", label: "Eredivisie" },
   { key: "primeiraliga", label: "Premeira Liga" },
   { key: "saudi", label: "Saudi Pro League" },
+  { key: "mls", label: "Major League Soccer"},
   { key: "k1", label: "K League 1" },
   { key: "k2", label: "K League 2" },
-  { key: "mls", label: "Major League Soccer"},
+  { key: "j1", label: "J League 1" }
   //{ key: "random", label: "All Stadiums"}
 ]
 
@@ -52,6 +54,7 @@ const Home = () => {
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
       <HeroCard heroword={heroWords}/>
       <StartBtn onClick={() => setPopUp(!popUp)} />
+      <StackSheet />
       
 
       <LeagueBtnSelector isOpen={popUp} onClose={setPopUp} league={LEAGUE} />

@@ -1,6 +1,7 @@
 [
   {
     "id": "bun-001",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "FC Bayern Munich",
     "stadium": "Allianz Arena",
@@ -9,6 +10,7 @@
   },
   {
     "id": "bun-002",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "Borussia Dortmund",
     "stadium": "Signal Iduna Park",
@@ -17,6 +19,7 @@
   },
   {
     "id": "bun-003",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "Bayer 04 Leverkusen",
     "stadium": "BayArena",
@@ -25,6 +28,7 @@
   },
   {
     "id": "bun-004",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "RB Leipzig",
     "stadium": "Red Bull Arena",
@@ -33,6 +37,7 @@
   },
   {
     "id": "bun-005",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "Eintracht Frankfurt",
     "stadium": "Deutsche Bank Park",
@@ -41,6 +46,7 @@
   },
   {
     "id": "bun-006",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "VfB Stuttgart",
     "stadium": "MHPArena",
@@ -49,6 +55,7 @@
   },
   {
     "id": "bun-007",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "Borussia Monchengladbach",
     "stadium": "BORUSSIA-PARK",
@@ -57,14 +64,7 @@
   },
   {
     "id": "bun-008",
-    "league": "Bundesliga",
-    "club": "VfL Wolfsburg",
-    "stadium": "Volkswagen Arena",
-    "latitude": 52.4325,
-    "longitude": 10.8039
-  },
-  {
-    "id": "bun-009",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "SC Freiburg",
     "stadium": "Europa-Park Stadion",
@@ -72,7 +72,8 @@
     "longitude": 7.8286
   },
   {
-    "id": "bun-010",
+    "id": "bun-009",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "TSG 1899 Hoffenheim",
     "stadium": "PreZero Arena",
@@ -80,7 +81,8 @@
     "longitude": 8.8886
   },
   {
-    "id": "bun-011",
+    "id": "bun-010",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "1. FSV Mainz 05",
     "stadium": "MEWA ARENA",
@@ -88,7 +90,8 @@
     "longitude": 8.2242
   },
   {
-    "id": "bun-012",
+    "id": "bun-011",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "FC Augsburg",
     "stadium": "WWK ARENA",
@@ -96,7 +99,8 @@
     "longitude": 10.8861
   },
   {
-    "id": "bun-013",
+    "id": "bun-012",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "SV Werder Bremen",
     "stadium": "Weserstadion",
@@ -104,7 +108,8 @@
     "longitude": 8.8378
   },
   {
-    "id": "bun-014",
+    "id": "bun-013",
+    "tier": 1,
     "league": "Bundesliga",
     "club": "1. FC Union Berlin",
     "stadium": "Stadion An der Alten Forsterei",
@@ -112,35 +117,48 @@
     "longitude": 13.5681
   },
   {
-    "id": "bun-015",
+    "id": "bun-014",
+    "tier": 1,
     "league": "Bundesliga",
-    "club": "1. FC Heidenheim",
-    "stadium": "Voith-Arena",
-    "latitude": 48.6686,
-    "longitude": 10.1394
+    "club": "1. FC Köln",
+    "stadium": "RheinEnergieStadion",
+    "latitude": 50.9335,
+    "longitude": 6.8749
+  },
+  {
+    "id": "bun-015",
+    "tier": 1,
+    "league": "Bundesliga",
+    "club": "Hamburger SV",
+    "stadium": "Volksparkstadion",
+    "latitude": 53.5872,
+    "longitude": 9.8986
   },
   {
     "id": "bun-016",
+    "tier": 1,
     "league": "Bundesliga",
-    "club": "FC St. Pauli",
-    "stadium": "Millerntor-Stadion",
-    "latitude": 53.5544,
-    "longitude": 9.9681
+    "club": "FC Schalke 04",
+    "stadium": "VELTINS-Arena",
+    "latitude": 51.5546,
+    "longitude": 7.0675
   },
   {
     "id": "bun-017",
+    "tier": 1,
     "league": "Bundesliga",
-    "club": "Holstein Kiel",
-    "stadium": "Holstein-Stadion",
-    "latitude": 54.3492,
-    "longitude": 10.1236
+    "club": "SV Elversberg",
+    "stadium": "URSAPHARM-Arena an der Kaiserlinde",
+    "latitude": 49.3142,
+    "longitude": 7.1294
   },
   {
     "id": "bun-018",
+    "tier": 1,
     "league": "Bundesliga",
-    "club": "VfL Bochum",
-    "stadium": "Vonovia Ruhrstadion",
-    "latitude": 51.4900,
-    "longitude": 7.2364
+    "club": "SC Paderborn 07",
+    "stadium": "Home Deluxe Arena",
+    "latitude": 51.7303,
+    "longitude": 8.7119
   }
 ]

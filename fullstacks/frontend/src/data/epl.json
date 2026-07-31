@@ -48,19 +48,19 @@
     "id": "epl-006",
     "tier": 1,
     "league": "Premier League",
-    "club": "Burnley",
-    "stadium": "Turf Moor",
-    "latitude": 53.7888,
-    "longitude": -2.2302
+    "club": "Chelsea",
+    "stadium": "Stamford Bridge",
+    "latitude": 51.4817,
+    "longitude": -0.191
   },
   {
     "id": "epl-007",
     "tier": 1,
     "league": "Premier League",
-    "club": "Chelsea",
-    "stadium": "Stamford Bridge",
-    "latitude": 51.4817,
-    "longitude": -0.1910
+    "club": "Coventry City",
+    "stadium": "Coventry Building Society Arena",
+    "latitude": 52.4481,
+    "longitude": -1.4956
   },
   {
     "id": "epl-008",
@@ -93,13 +93,31 @@
     "id": "epl-011",
     "tier": 1,
     "league": "Premier League",
+    "club": "Hull City",
+    "stadium": "MKM Stadium",
+    "latitude": 53.7461,
+    "longitude": -0.3678
+  },
+  {
+    "id": "epl-012",
+    "tier": 1,
+    "league": "Premier League",
+    "club": "Ipswich Town",
+    "stadium": "Portman Road",
+    "latitude": 52.0547,
+    "longitude": 1.1448
+  },
+  {
+    "id": "epl-013",
+    "tier": 1,
+    "league": "Premier League",
     "club": "Leeds United",
     "stadium": "Elland Road",
     "latitude": 53.7778,
     "longitude": -1.5722
   },
   {
-    "id": "epl-012",
+    "id": "epl-014",
     "tier": 1,
     "league": "Premier League",
     "club": "Liverpool",
@@ -108,7 +126,7 @@
     "longitude": -2.9608
   },
   {
-    "id": "epl-013",
+    "id": "epl-015",
     "tier": 1,
     "league": "Premier League",
     "club": "Manchester City",
@@ -117,7 +135,7 @@
     "longitude": -2.2004
   },
   {
-    "id": "epl-014",
+    "id": "epl-016",
     "tier": 1,
     "league": "Premier League",
     "club": "Manchester United",
@@ -126,7 +144,7 @@
     "longitude": -2.2914
   },
   {
-    "id": "epl-015",
+    "id": "epl-017",
     "tier": 1,
     "league": "Premier League",
     "club": "Newcastle United",
@@ -135,16 +153,16 @@
     "longitude": -1.6217
   },
   {
-    "id": "epl-016",
+    "id": "epl-018",
     "tier": 1,
     "league": "Premier League",
     "club": "Nottingham Forest",
     "stadium": "City Ground",
-    "latitude": 52.9400,
+    "latitude": 52.94,
     "longitude": -1.1328
   },
   {
-    "id": "epl-017",
+    "id": "epl-019",
     "tier": 1,
     "league": "Premier League",
     "club": "Sunderland",
@@ -153,30 +171,12 @@
     "longitude": -1.3884
   },
   {
-    "id": "epl-018",
+    "id": "epl-020",
     "tier": 1,
     "league": "Premier League",
     "club": "Tottenham Hotspur",
     "stadium": "Tottenham Hotspur Stadium",
     "latitude": 51.6044,
     "longitude": -0.0664
-  },
-  {
-    "id": "epl-019",
-    "tier": 1,
-    "league": "Premier League",
-    "club": "West Ham United",
-    "stadium": "London Stadium",
-    "latitude": 51.5387,
-    "longitude": -0.0166
-  },
-  {
-    "id": "epl-020",
-    "tier": 1,
-    "league": "Premier League",
-    "club": "Wolverhampton Wanderers",
-    "stadium": "Molineux Stadium",
-    "latitude": 52.5902,
-    "longitude": -2.1304
   }
 ]
