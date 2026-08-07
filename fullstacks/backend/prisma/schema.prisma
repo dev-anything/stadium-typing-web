@@ -21,18 +21,18 @@ model League {
     country   String
     createdAt DateTime @default(now())
 
-    stadiums  Stadium[]
+    stadiums Stadium[]
 }
 
 model Stadium {
-    id Int @id @default(autoincrement())
-    name String
-    city String
-    country String
-    latitude Float
+    id        Int      @id @default(autoincrement())
+    name      String
+    city      String
+    country   String
+    latitude  Float
     longitude Float
-    leagueId Int
-    league League @relation(fields: [leagueId], references: [id])
+    leagueId  Int
+    league    League   @relation(fields: [leagueId], references: [id])
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
@@ -40,13 +40,13 @@ model Stadium {
 }
 
 model Record {
-    id Int @id @default(autoincrement())
-    league String
-    wpm Float
-    accuracy Float
-    timeSeconds Int
+    id             Int      @id @default(autoincrement())
+    league         String
+    wpm            Float
+    accuracy       Float
+    timeSeconds    Int
     completedCount Int
-    createdAt DateTime @default(now())
+    createdAt      DateTime @default(now())
 
     @@index([league, wpm])
 }
