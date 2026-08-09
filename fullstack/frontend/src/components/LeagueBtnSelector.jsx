@@ -27,8 +27,6 @@ const LeagueBtnSelector = ({ isOpen, onClose }) => {
   
   if (!isOpen) return null;
   if (isLoading) return <p>Loading...</p>
-  
-  console.log(leagues);
 
 
 
