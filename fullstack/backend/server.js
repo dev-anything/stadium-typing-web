@@ -22,7 +22,7 @@ const pool = mysql.createPool({
 app.get("/api/league", async (req, res) => {
   try {
     const [rows] = await pool.query(
-      `SELECT id, league_name, country_code, league_code FROM league`
+      `SELECT id, league_name, country_code, league_code FROM leagues`
     )
     res.json(rows)
   } catch (e) {

@@ -16,13 +16,11 @@ const Stadium = () => {
   const [targetCount, setTargetCount] = useState();
   const [millis, setMillis] = useState(0);
   const [isCountdowning, setIsCountdowning] = useState(true);
+  const [stadiumList, setStadiumList] = useState([]);
   const { leagueInfo } = useParams();
-  const { current, next, currentStage, stage } = useShuffle({
-    items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
-  });
-  const { typed, handleInput, isComplete, wpm, accuracy } = useTypingStats({
-    target: current.stadium
-  });
+  //const { current, next, currentStage, stage } = useShuffle({
+  //  items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
+  //});
   
   useEffect(() => {
     const old = Date.now();
@@ -46,9 +44,31 @@ const Stadium = () => {
           setTargetCount(remainSec);
         }
         
-      }, 1000);
-    }, []);
-      
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+  
+
+  useEffect(() => {
+    
+    const API_URL = import.meta.env.VITE_API_URL;
+    //console.log(API_URL);
+
+    fetch(`${API_URL}/api/league/stadiums/${leagueInfo}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch URL");
+      }
+      return res.json();
+    })
+    .then((data) => setStadiumList(data))
+  }, [leagueInfo]);
+
+  const { current, next, currentStage, stage } = useShuffle({ items: stadiumList });
+  const { typed, handleInput, isComplete, wpm, accuracy } = useTypingStats({
+    target: current.stadium_name
+  });
+  
   if (!current) return null;
 
   return (
