@@ -1,0 +1,146 @@
+[
+  {
+    "id": "ere-001",
+    "league": "Eredivisie",
+    "club": "AFC Ajax",
+    "stadium": "Johan Cruyff Arena",
+    "latitude": 52.3142,
+    "longitude": 4.9419
+  },
+  {
+    "id": "ere-002",
+    "league": "Eredivisie",
+    "club": "AZ Alkmaar",
+    "stadium": "AFAS Stadion",
+    "latitude": 52.6125,
+    "longitude": 4.7422
+  },
+  {
+    "id": "ere-003",
+    "league": "Eredivisie",
+    "club": "Excelsior Rotterdam",
+    "stadium": "Van Donge & De Roo Stadion",
+    "latitude": 51.9197,
+    "longitude": 4.5167
+  },
+  {
+    "id": "ere-004",
+    "league": "Eredivisie",
+    "club": "FC Groningen",
+    "stadium": "Euroborg",
+    "latitude": 53.2058,
+    "longitude": 6.5828
+  },
+  {
+    "id": "ere-005",
+    "league": "Eredivisie",
+    "club": "FC Twente",
+    "stadium": "De Grolsch Veste",
+    "latitude": 52.2364,
+    "longitude": 6.8378
+  },
+  {
+    "id": "ere-006",
+    "league": "Eredivisie",
+    "club": "FC Utrecht",
+    "stadium": "Stadion Galgenwaard",
+    "latitude": 52.0783,
+    "longitude": 5.1472
+  },
+  {
+    "id": "ere-007",
+    "league": "Eredivisie",
+    "club": "FC Volendam",
+    "stadium": "Kras Stadion",
+    "latitude": 52.4961,
+    "longitude": 5.0683
+  },
+  {
+    "id": "ere-008",
+    "league": "Eredivisie",
+    "club": "Feyenoord Rotterdam",
+    "stadium": "De Kuip (Stadion Feijenoord)",
+    "latitude": 51.8939,
+    "longitude": 4.5231
+  },
+  {
+    "id": "ere-009",
+    "league": "Eredivisie",
+    "club": "Fortuna Sittard",
+    "stadium": "Fortuna Sittard Stadion",
+    "latitude": 50.9922,
+    "longitude": 5.8561
+  },
+  {
+    "id": "ere-010",
+    "league": "Eredivisie",
+    "club": "Go Ahead Eagles",
+    "stadium": "De Adelaarshorst",
+    "latitude": 52.2575,
+    "longitude": 6.1706
+  },
+  {
+    "id": "ere-011",
+    "league": "Eredivisie",
+    "club": "Heracles Almelo",
+    "stadium": "Asito Stadion",
+    "latitude": 52.3411,
+    "longitude": 6.6492
+  },
+  {
+    "id": "ere-012",
+    "league": "Eredivisie",
+    "club": "NAC Breda",
+    "stadium": "Rat Verlegh Stadion",
+    "latitude": 51.5956,
+    "longitude": 4.7503
+  },
+  {
+    "id": "ere-013",
+    "league": "Eredivisie",
+    "club": "NEC Nijmegen",
+    "stadium": "Goffertstadion",
+    "latitude": 51.8228,
+    "longitude": 5.8369
+  },
+  {
+    "id": "ere-014",
+    "league": "Eredivisie",
+    "club": "PEC Zwolle",
+    "stadium": "MAC3PARK Stadion",
+    "latitude": 52.5186,
+    "longitude": 6.1189
+  },
+  {
+    "id": "ere-015",
+    "league": "Eredivisie",
+    "club": "PSV Eindhoven",
+    "stadium": "Philips Stadion",
+    "latitude": 51.4417,
+    "longitude": 5.4675
+  },
+  {
+    "id": "ere-016",
+    "league": "Eredivisie",
+    "club": "SC Heerenveen",
+    "stadium": "Abe Lenstra Stadion",
+    "latitude": 52.9583,
+    "longitude": 5.9361
+  },
+  {
+    "id": "ere-017",
+    "league": "Eredivisie",
+    "club": "Sparta Rotterdam",
+    "stadium": "Spartastadion Het Kasteel",
+    "latitude": 51.9192,
+    "longitude": 4.4331
+  },
+  {
+    "id": "ere-018",
+    "league": "Eredivisie",
+    "club": "SC Telstar",
+    "stadium": "711 Stadion",
+    "latitude": 52.4608,
+    "longitude": 4.6369
+  }
+]
