@@ -17,6 +17,7 @@ const Stadium = () => {
   const [millis, setMillis] = useState(0);
   const [isCountdowning, setIsCountdowning] = useState(true);
   const { leagueInfo } = useParams();
+  console.log(leagueInfo);
   const { current, next, currentStage, stage } = useShuffle({
     items: leagueInfo == "random" ? allStadiums : stadiumsByLeague[leagueInfo]
   });
