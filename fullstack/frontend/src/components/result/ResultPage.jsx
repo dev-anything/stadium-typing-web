@@ -1,4 +1,4 @@
-import RestartBtn from "@components/RestartBtn";
+import RestartBtn from "./RestartBtn";
 import { useLocation } from "react-router-dom";
 
 function formatTime(resultTime) {

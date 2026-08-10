@@ -1,8 +1,8 @@
-import LeagueBtnSelector from "@components/LeagueBtnSelector";
+import LeagueBtnSelector from "./LeagueBtnSelector";
 import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";
-import StackSheet from "@components/StackSheet";
+import StackSheet from "./StackSheet";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 

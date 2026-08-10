@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import StadiumMap from "@components/StadiumMap";
-import TypeArea from "@components/TypeArea";
+import StadiumMap from "./StadiumMap";
+import TypeArea from "./TypeArea";
 import useShuffle from "@hooks/useShuffle";
-import Countdown from "@components/Countdown";
-import Stopwatch from "@components/Stopwatch";
-import Progress from "@components/Progress";
+import Countdown from "./Countdown";
+import Stopwatch from "./Stopwatch";
+import Progress from "./Progress";
 import useTypingStats from "@hooks/useTypingStats";
-import StatDisplay from "@components/StatDisplay";
-import Loading from "@components/Loading";
+import StatDisplay from "./StatDisplay";
+import Loading from "@components/common/Loading";
 
 
 const Stadium = () => {

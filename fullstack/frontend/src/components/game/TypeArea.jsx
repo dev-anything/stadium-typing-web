@@ -1,4 +1,4 @@
-import StatusBar from "@components/StatusBar";
+import StatusBar from "./StatusBar";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
