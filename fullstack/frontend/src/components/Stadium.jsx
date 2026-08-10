@@ -10,6 +10,7 @@ import Stopwatch from "@components/Stopwatch";
 import Progress from "@components/Progress";
 import useTypingStats from "@hooks/useTypingStats";
 import StatDisplay from "@components/StatDisplay";
+import Loading from "@components/Loading";
 
 
 const Stadium = () => {
@@ -50,26 +51,26 @@ const Stadium = () => {
   }, []);
   
 
-  useEffect(() => {
+  //useEffect(() => {
     
-    const API_URL = import.meta.env.VITE_API_URL;
-    //console.log(API_URL);
+  //  const API_URL = import.meta.env.VITE_API_URL;
+  //  //console.log(API_URL);
 
-    fetch(`${API_URL}/api/league/stadiums/${leagueInfo}`)
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error("Failed to fetch URL");
-      }
-      return res.json();
-    })
-    .then((data) => setStadiumList(data))
-  }, [leagueInfo]);
+  //  fetch(`${API_URL}/api/league/stadiums/${leagueInfo}`)
+  //  .then((res) => {
+  //    if (!res.ok) {
+  //      throw new Error("Failed to fetch URL");
+  //    }
+  //    return res.json();
+  //  })
+  //  .then((data) => setStadiumList(data))
+  //}, [leagueInfo]);
 
   
 
   // stadiumList 가 비어 있으면 useShuffle 의 current 가 undefined 가 되므로
   // API 응답이 도착해 stadiumList 가 채워질 때까지 렌더링을 보류한다
-  if (stadiumList.length === 0 || !current) return <div>Loading...</div>;
+  if (stadiumList.length === 0 || !current) return <Loading />;
   //if (!current) return null;
 
   return (

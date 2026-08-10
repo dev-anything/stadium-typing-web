@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Loading from "@components/Loading";
 
 const LeagueBtnSelector = ({ isOpen, onClose }) => {
   
@@ -26,7 +27,7 @@ const LeagueBtnSelector = ({ isOpen, onClose }) => {
   }, []);
   
   if (!isOpen) return null;
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) return <Loading />;
 
 
 

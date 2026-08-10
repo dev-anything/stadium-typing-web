@@ -1,6 +1,7 @@
 import { MapContainer, TileLayer, useMap, Marker, Popup, ZoomControl } from "react-leaflet";
 import L from 'leaflet';
 import { useEffect } from "react";
+import Loading from "@components/Loading";
 
 
 //const stadiumIcon = L.divIcon({
@@ -96,7 +97,7 @@ const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
 
   if (latitude === undefined || longitude === undefined)
   {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   return (
