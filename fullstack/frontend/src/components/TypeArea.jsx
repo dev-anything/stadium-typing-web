@@ -174,7 +174,7 @@ const TypeArea = (
         <StatusBar progress={progress} stopwatch={stopwatch} statDisplay={statDisplay} />
 
         <div className="mt-4 flex justify-center">
-          <div className="relative select-none font-mono leading-relaxed text-[#F4F5F0] md:text-[15px]">
+          <div className="relative select-none font-mono leading-relaxed text-[#F4F5F0] md:text-[18px]">
             {stadiumName.split('').map((char, i) => {
               const status =
                 i >= typed.length ? 'pending' : typed[i] === char ? 'correct' : 'incorrect'

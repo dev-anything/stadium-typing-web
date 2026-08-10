@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import StadiumMap from "@components/StadiumMap";
 import TypeArea from "@components/TypeArea";
 import useShuffle from "@hooks/useShuffle";
-import { allStadiums, stadiumsByLeague } from "@data";
 import Countdown from "@components/Countdown";
 import Stopwatch from "@components/Stopwatch";
 import Progress from "@components/Progress";
@@ -41,37 +40,31 @@ const Stadium = () => {
         setIsCountdowning(false);
         clearInterval(timer);
       }
-      else
-        {
-          setTargetCount(remainSec);
-        }
+      else setTargetCount(remainSec);
         
     }, 1000);
     return () => clearInterval(timer);
   }, []);
   
 
-  //useEffect(() => {
-    
-  //  const API_URL = import.meta.env.VITE_API_URL;
-  //  //console.log(API_URL);
+  useEffect(() => {    
+    const API_URL = import.meta.env.VITE_API_URL;
 
-  //  fetch(`${API_URL}/api/league/stadiums/${leagueInfo}`)
-  //  .then((res) => {
-  //    if (!res.ok) {
-  //      throw new Error("Failed to fetch URL");
-  //    }
-  //    return res.json();
-  //  })
-  //  .then((data) => setStadiumList(data))
-  //}, [leagueInfo]);
+    fetch(`${API_URL}/api/league/stadiums/${leagueInfo}`)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch URL");
+      }
+      return res.json();
+    })
+    .then((data) => setStadiumList(data))
+  }, [leagueInfo]);
 
   
 
   // stadiumList 가 비어 있으면 useShuffle 의 current 가 undefined 가 되므로
   // API 응답이 도착해 stadiumList 가 채워질 때까지 렌더링을 보류한다
   if (stadiumList.length === 0 || !current) return <Loading />;
-  //if (!current) return null;
 
   return (
     <div className="relative h-[80%] w-full overflow-hidden rounded-2xl">
