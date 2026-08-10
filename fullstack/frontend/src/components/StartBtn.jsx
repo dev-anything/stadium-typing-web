@@ -1,6 +1,4 @@
 const StartBtn = ({ onClick }) => {
-
-
   return (
     <div className="flex justify-center pb-10">
       <button

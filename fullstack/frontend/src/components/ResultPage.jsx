@@ -1,5 +1,5 @@
 import RestartBtn from "@components/RestartBtn";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function formatTime(resultTime) {
   const minutes = String(Math.floor(resultTime / 60000)).padStart(2, '0');
@@ -58,11 +58,6 @@ const ResultPage = () => {
           </p>
         </div>
       </div>
-
-      {/*<Link to="/">Go to Home</Link>*/}
-      {/*<div>{minutes}:{seconds}:{milliSeconds}</div>
-      <div>{typingAccuracy}</div>
-      <div>{averageWpm}</div>*/}
       <RestartBtn leagueUrl={leagueUrl} />
     </div>
   );

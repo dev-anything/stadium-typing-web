@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 const Stopwatch = ({ onWaiting, setMillis, millis }) => {
