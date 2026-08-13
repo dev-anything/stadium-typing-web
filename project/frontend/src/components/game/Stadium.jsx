@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import StadiumMap from "./StadiumMap";
 import TypeArea from "./TypeArea";
 import useShuffle from "@hooks/useShuffle";
-import { allStadiums, stadiumsByLeague } from "@data";
 import Countdown from "./Countdown";
 import Loading from "@components/common/Loading";
 import { supabase } from "../../lib/supabase";

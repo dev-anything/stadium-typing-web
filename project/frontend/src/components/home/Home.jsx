@@ -2,8 +2,6 @@ import LeagueBtnSelector from "./LeagueBtnSelector";
 import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";
-import StackSheet from "./StackSheet";
-import Test from "./Test";
 
 const heroWords = ["TYPE", "THE", "PITCH"];
 
@@ -40,12 +38,8 @@ const Home = () => {
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
       <HeroCard heroword={heroWords}/>
       <StartBtn onClick={() => setPopUp(!popUp)} />
-      {/*<StackSheet />*/}
       
       <LeagueBtnSelector isOpen={popUp} onClose={setPopUp} />
-      
-
-      {/*<Test />*/}
 
       {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
       {/*<section className="mx-auto max-w-4xl px-6 py-16">
