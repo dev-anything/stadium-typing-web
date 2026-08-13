@@ -31,22 +31,7 @@ const stats = [
   { value: "6", label: "CONTINENTS" },
 ];
 
-const LEAGUE = [
-  { key: "epl", label: "Premier League" },
-  { key: "efl", label: "EFL Championship" },
-  { key: "laliga", label: "La Liga" },
-  { key: "bundesliga", label: "Bundesliga" },
-  { key: "seriea", label: "Serie A" },
-  { key: "ligue1", label: "Ligue 1" },
-  { key: "eredivisie", label: "Eredivisie" },
-  { key: "primeiraliga", label: "Premeira Liga" },
-  { key: "saudi", label: "Saudi Pro League" },
-  { key: "mls", label: "Major League Soccer"},
-  { key: "k1", label: "K League 1" },
-  { key: "k2", label: "K League 2" },
-  { key: "j1", label: "J League 1" }
-  //{ key: "random", label: "All Stadiums"}
-]
+
 
 const Home = () => {
   const [popUp, setPopUp] = useState(false);
