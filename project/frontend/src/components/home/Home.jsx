@@ -41,6 +41,8 @@ const Home = () => {
       
       <LeagueBtnSelector isOpen={popUp} onClose={setPopUp} />
 
+      <h2>This is project folder.</h2>
+
       {/* 진행 순서 — 카드/테두리 없이 심플하게 */}
       {/*<section className="mx-auto max-w-4xl px-6 py-16">
         <div className="grid gap-10 sm:grid-cols-3">
