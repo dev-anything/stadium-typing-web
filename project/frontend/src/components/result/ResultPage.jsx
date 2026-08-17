@@ -1,6 +1,8 @@
 import HomeBtn from "@components/result/HomeBtn";
 import RestartBtn from "./RestartBtn";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { supabase } from "../../lib/supabase";
 
 function formatTime(resultTime) {
   const minutes = String(Math.floor(resultTime / 60000)).padStart(2, '0');
@@ -10,13 +12,42 @@ function formatTime(resultTime) {
 }
 
 const ResultPage = () => {
-  const location = useLocation();
-  const resultTime = location.state.millis;
-  const leagueUrl = location.state.league;
-  const typingAccuracy = location.state.accuracy;
-  const averageWpm = location.state.wpm;
+  const { state } = useLocation();
 
-  
+
+  const {
+    leagueUrl,
+    leagueId,
+    resultTime,
+    typingAccuracy,
+    averageWpm
+  } = state || {};
+
+
+  useEffect(() => {
+    const saveResult = async () => {
+      if (!state) return;
+
+      const { data, error } = await supabase
+        .from("typing_records")
+        .insert({
+          league_id: leagueId,
+          typing_time: resultTime,
+          accuracy: typingAccuracy,
+          wpm: averageWpm
+        })
+        .select()
+        .single();
+      
+      if (error) {
+        console.error("Save error: ", error);
+        return;
+      }
+    }
+
+    saveResult();
+  }, [state, leagueId, resultTime, typingAccuracy, averageWpm]);
+
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-10 px-6 py-10">

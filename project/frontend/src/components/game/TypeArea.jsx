@@ -70,7 +70,7 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo }) => {
+const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo, leagueId }) => {
   const { handleInput, wpm, accuracy } = useTypingStats({
     target: stadiumName
   });
@@ -126,10 +126,11 @@ const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo }) => {
       {
         navigate("/result", {
           state: {
-            millis: millis,
-            league: leagueInfo,
-            accuracy: accuracy,
-            wpm: wpm
+            leagueUrl: leagueInfo,
+            leagueId: leagueId,
+            resultTime: millis,
+            typingAccuracy: accuracy,
+            averageWpm: wpm
           }
         });
       }

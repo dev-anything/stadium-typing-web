@@ -29,7 +29,7 @@ const Stadium = () => {
         const { data: stadiums, error: stadiumsError} = await supabase
           .from("stadiums")
           .select(`
-              id, tier, club, stadium_name, latitude, longitude
+              league_id, tier, club, stadium_name, latitude, longitude
             `)
           .eq("league_id", league.id);
         
@@ -48,7 +48,7 @@ const Stadium = () => {
   }, [leagueInfo]);
 
   if (stadiumList.length === 0 || current === undefined) return <Loading />;
-  else console.log(stadiumList);
+  
 
   return (
     <div className="relative h-[80%] w-full overflow-hidden rounded-2xl">
@@ -64,6 +64,7 @@ const Stadium = () => {
         currentStage={currentStage}
         stage={stage}
         leagueInfo={leagueInfo}
+        leagueId={current.league_id}
       />
     </div>
   )
