@@ -4,40 +4,15 @@ import { useParams } from "react-router-dom";
 import StadiumMap from "./StadiumMap";
 import TypeArea from "./TypeArea";
 import useShuffle from "@hooks/useShuffle";
-import Countdown from "./Countdown";
 import Loading from "@components/common/Loading";
-import { supabase } from "../../lib/supabase";
+import { supabase } from "@lib/supabase";
 
 
 const Stadium = () => {
-  const [countdown, setCountdown] = useState(5);
-  const [millis, setMillis] = useState(0);
-  const [isCountdowning, setIsCountdowning] = useState(true);
   const [stadiumList, setStadiumList] = useState([]);
   const { leagueInfo } = useParams();
   const { current, next, currentStage, stage } = useShuffle({ items: stadiumList });
 
-  useEffect(() => {
-    const old = Date.now();
-    const total = 5000;
-    
-    const timer = setInterval(() => {
-      const now = Date.now();
-      const diff = now - old;
-      
-      const remain = total - diff;
-      const remainSec = Math.ceil(remain / 1000);
-      
-      if (remainSec <= 0)
-      {
-        setCountdown(0);
-        setIsCountdowning(false);
-        clearInterval(timer);
-      }
-      else setCountdown(remainSec);
-        
-      }, 1000);
-  }, []);
   
   useEffect(() => {    
     const fetchStadiumList = async () => {
@@ -63,8 +38,6 @@ const Stadium = () => {
 
         setStadiumList(stadiums);
 
-        //console.log(stadiumList);
-
       } catch (err) {
         console.error("ERROR OCCUR: ", err);
         throw err;
@@ -83,20 +56,15 @@ const Stadium = () => {
         latitude={current.latitude}
         longitude={current.longitude}
         stadiumName={current.stadium_name}
+        club={current.club}
       />
       <TypeArea
         stadiumName={current.stadium_name}
         onNext={next}
         currentStage={currentStage}
         stage={stage}
-        isCountdowning={isCountdowning}
-        setMillis={setMillis}
-        millis={millis}
         leagueInfo={leagueInfo}
       />
-
-      <Countdown isActive={isCountdowning} count={countdown} />
-
     </div>
   )
 }

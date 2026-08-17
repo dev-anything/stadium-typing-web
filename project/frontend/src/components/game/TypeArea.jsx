@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Progress from "@components/game/Progress";
 import Stopwatch from "@components/game/Stopwatch";
 import StatDisplay from "@components/game/StatDisplay";
+import Countdown from "@components/game/Countdown";
 
 
 const buildKeyMap = () => {
@@ -69,25 +70,41 @@ const resolveChar = (e) => {
   return base
 }
 
-const TypeArea = (
-    {
-      stadiumName,
-      onNext,
-      currentStage,
-      stage,
-      isCountdowning,
-      setMillis,
-      millis,
-      leagueInfo,
-      //handleInput,
-    }) => {
+const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo }) => {
   const { handleInput, wpm, accuracy } = useTypingStats({
     target: stadiumName
   });
+
+  const [countdown, setCountdown] = useState(5);
+  const [isCountdowning, setIsCountdowning] = useState(true);
+  const [millis, setMillis] = useState(0);
+
   const [typed, setTyped] = useState("");
   const inputRef = useRef(null);
   const lastKeyRef = useRef({ code: '', time: 0 });
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const old = Date.now();
+    const total = 5000;
+    
+    const timer = setInterval(() => {
+      const now = Date.now();
+      const diff = now - old;
+      
+      const remain = total - diff;
+      const remainSec = Math.ceil(remain / 1000);
+      
+      if (remainSec <= 0)
+      {
+        setCountdown(0);
+        setIsCountdowning(false);
+        clearInterval(timer);
+      }
+      else setCountdown(remainSec);
+        
+      }, 1000);
+  }, []);
 
   useEffect(() => {
     handleInput(typed);
@@ -120,8 +137,6 @@ const TypeArea = (
   }, [typed, stadiumName, onNext]);
 
   const handleKeyDown = (e) => {
-    //console.log(e);
-    //console.log("typed: ", typed);
     const now = performance.now()
 
     if (isCountdowning)
@@ -132,9 +147,8 @@ const TypeArea = (
     }
 
 
-    if (lastKeyRef.current.code === e.code && now - lastKeyRef.current.time < 50) {
-      return;
-    }
+    if (lastKeyRef.current.code === e.code && now - lastKeyRef.current.time < 50) return;
+
     lastKeyRef.current = { code: e.code, time: now }
 
     if (e.code === 'Backspace') {
@@ -173,6 +187,7 @@ const TypeArea = (
   return (
     <div className="absolute inset-x-0 bottom-0 z-1000 flex justify-center px-4 pb-4 md:px-8 md:pb-8">
       <div className="relative w-full max-w-2xl rounded-2xl border border-[#3CCB6F33] bg-[#0B1F17]/70 p-5 shadow-2xl backdrop-blur-md md:p-6">
+        <Countdown isActive={true} count={countdown} />
 
         
         <StatusBar 

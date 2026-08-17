@@ -1,53 +1,7 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup, ZoomControl } from "react-leaflet";
+import { MapContainer, TileLayer, useMap, Marker, Tooltip } from "react-leaflet";
 import L from 'leaflet';
 import { useEffect } from "react";
-
-
-//const stadiumIcon = L.divIcon({
-//  html: `<div style="font-size: 28px;">⚽</div>`,
-//  className: '', // 기본 Leaflet 클래스(회색 배경 박스) 제거용, 비워두는 게 핵심
-//  iconSize: [32, 32],
-//  iconAnchor: [16, 32],
-//})
-
-//const stadiumIcon = L.divIcon({
-//  html: `
-//    <div style="
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      width: 32px;
-//      height: 32px;
-//      background: #FFB454;
-//      border-radius: 50%;
-//      border: 2px solid #0B1F17;
-//      box-shadow: 0 0 12px rgba(255, 180, 84, 0.6);
-//      font-size: 16px;
-//    ">⚽</div>
-//  `,
-//  className: '',
-//  iconSize: [32, 32],
-//  iconAnchor: [16, 16],
-//})
-
-//const stadiumIcon = L.divIcon({
-//  html: `
-//    <div style="
-//      display: flex;
-//      align-items: center;
-//      justify-content: center;
-//      width: 30px;
-//      height: 30px;
-//      background: #F4F5F0;
-//      border-radius: 50%;
-//      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
-//      font-size: 15px;
-//    ">⚽</div>
-//  `,
-//  className: '',
-//  iconSize: [30, 30],
-//  iconAnchor: [15, 15],
-//})
+import Loading from "@components/common/Loading";
 
 const stadiumIcon = L.divIcon({
   html: `
@@ -92,36 +46,40 @@ const MapUpdater = ({ latitude, longitude }) => {
   return null;
 }
 
-const StadiumMap = ( { latitude, longitude, stadiumName } ) => {
+const StadiumMap = ( { latitude, longitude, stadiumName, club } ) => {
 
   if (latitude === undefined || longitude === undefined)
   {
-    return <div>Loading...</div>
+    return <Loading />;
   }
 
   return (
-    //<div className="relative h-full w-full shrink-0 overflow-hidden rounded-2xl border border-[#3CCB6F1f] shadow-2xl md:h-full md:w-1/2">
     <div className="absolute inset-0">
+      
       <MapContainer
         center={[latitude, longitude]}
         zoom={7}
         zoomControl={false}
         scrollWheelZoom={false} 
         style={{ width: '100%', height: '100%' }}
-        className="w-full"
+        className="w-full relative"
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {/*<ZoomControl position="bottomright" />*/}
         <MapUpdater latitude={latitude} longitude={longitude} />
+        
         <Marker position={[latitude, longitude]} icon={stadiumIcon}>
-          <Popup>{stadiumName}</Popup>
+          <Tooltip
+            className="font-display"
+            permanent
+            direction="top"
+            offset={[0, -15]}
+          >
+            {club}
+          </Tooltip>
         </Marker>
-        <div className="pointer-events-none absolute bottom-3 left-3 rounded-full bg-[#0B1F17]/80 px-3 py-1 font-mono text-[10px] tracking-widest text-[#9CB0A6]">
-          NOW APPROACHING
-        </div>
       </MapContainer>
     </div>
   );

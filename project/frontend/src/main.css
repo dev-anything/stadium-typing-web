@@ -13,6 +13,18 @@
   html::-webkit-scrollbar {
     display: none;
   }
+
+  .leaflet-tooltip {
+    @apply
+    rounded-full
+    border
+    border-[#3CCB6F33] bg-[#0B1F17]/85 px-2.5 py-1 text-[11px] font-mono text-[#F4F5F0] shadow-lg;
+  }
+
+  .leaflet-tooltip::before {
+    display: none;
+  }
+  
 }
 
 @layer components {
@@ -147,6 +159,23 @@
     height: 6rem;
     background: linear-gradient(180deg, #16332470 0%, #0d2118 100%);
     border: 1px solid #3ccb6f33;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transform-origin: top center;
+    animation: flipDown 0.5s cubic-bezier(.2,.9,.3,1) both;
+  }
+
+
+  .flip-tile-small {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 3rem;
+    font-size: 30px;
+    opacity: 0;
+    background: linear-gradient(180deg, #16332470 0%, #0d2118 100%);
+    /*border: 1px solid #3ccb6f33;*/
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.4);
     transform-origin: top center;
