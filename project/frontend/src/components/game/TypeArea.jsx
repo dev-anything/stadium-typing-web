@@ -187,7 +187,7 @@ const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo }) => {
   return (
     <div className="absolute inset-x-0 bottom-0 z-1000 flex justify-center px-4 pb-4 md:px-8 md:pb-8">
       <div className="relative w-full max-w-2xl rounded-2xl border border-[#3CCB6F33] bg-[#0B1F17]/70 p-5 shadow-2xl backdrop-blur-md md:p-6">
-        <Countdown isActive={true} count={countdown} />
+        <Countdown isActive={isCountdowning} count={countdown} />
 
         
         <StatusBar 
