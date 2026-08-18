@@ -1,6 +1,6 @@
 import HomeBtn from "@components/result/HomeBtn";
 import RestartBtn from "./RestartBtn";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { supabase } from "../../lib/supabase";
 
@@ -13,8 +13,7 @@ function formatTime(resultTime) {
 
 const ResultPage = () => {
   const { state } = useLocation();
-
-
+  
   const {
     leagueUrl,
     leagueId,
@@ -23,6 +22,11 @@ const ResultPage = () => {
     averageWpm,
     gameId
   } = state || {};
+
+  if (!gameId)
+  {
+    return <Navigate to="/" replace />
+  }
 
 
   useEffect(() => {
