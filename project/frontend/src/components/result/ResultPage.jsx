@@ -20,7 +20,8 @@ const ResultPage = () => {
     leagueId,
     resultTime,
     typingAccuracy,
-    averageWpm
+    averageWpm,
+    gameId
   } = state || {};
 
 
@@ -34,7 +35,8 @@ const ResultPage = () => {
           league_id: leagueId,
           typing_time: resultTime,
           accuracy: typingAccuracy,
-          wpm: averageWpm
+          wpm: averageWpm,
+          game_id: gameId,
         })
         .select()
         .single();

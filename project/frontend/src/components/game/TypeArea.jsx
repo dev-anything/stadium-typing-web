@@ -120,6 +120,7 @@ const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo, league
   useEffect(() => {
     if (typed === stadiumName)
     {
+      const gameId = crypto.randomUUID();
       setTyped('');
       onNext();
       if (currentStage == stage)
@@ -130,7 +131,8 @@ const TypeArea = ({ stadiumName, onNext, currentStage, stage, leagueInfo, league
             leagueId: leagueId,
             resultTime: millis,
             typingAccuracy: accuracy,
-            averageWpm: wpm
+            averageWpm: wpm,
+            gameId: gameId,
           }
         });
       }
