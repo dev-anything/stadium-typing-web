@@ -72,12 +72,12 @@ const StadiumMap = ( { latitude, longitude, stadiumName, club } ) => {
         
         <Marker position={[latitude, longitude]} icon={stadiumIcon}>
           <Tooltip
-            className="font-display"
+            className="font-display text-4"
             permanent
             direction="top"
-            offset={[0, -15]}
+            offset={[0, -50]}
           >
-            {club}
+            TEAM: {club}
           </Tooltip>
         </Marker>
       </MapContainer>
