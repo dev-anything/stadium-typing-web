@@ -55,7 +55,6 @@ const Stadium = () => {
       <StadiumMap
         latitude={current.latitude}
         longitude={current.longitude}
-        stadiumName={current.stadium_name}
         club={current.club}
       />
       <TypeArea

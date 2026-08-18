@@ -1,6 +1,6 @@
 import HomeBtn from "@components/result/HomeBtn";
 import RestartBtn from "./RestartBtn";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { supabase } from "../../lib/supabase";
 

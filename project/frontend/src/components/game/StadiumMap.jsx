@@ -46,7 +46,7 @@ const MapUpdater = ({ latitude, longitude }) => {
   return null;
 }
 
-const StadiumMap = ( { latitude, longitude, stadiumName, club } ) => {
+const StadiumMap = ( { latitude, longitude, club } ) => {
 
   if (latitude === undefined || longitude === undefined)
   {
