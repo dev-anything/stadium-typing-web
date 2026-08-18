@@ -65,9 +65,13 @@ const StadiumMap = ( { latitude, longitude, club } ) => {
         className="w-full relative"
       >
         <TileLayer
+          attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://tiles.stadiamaps.com/tiles/stamen_toner_dark/{z}/{x}/{y}{r}.png"
+        />
+        {/*<TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        />*/}
         <MapUpdater latitude={latitude} longitude={longitude} />
         
         <Marker position={[latitude, longitude]} icon={stadiumIcon}>

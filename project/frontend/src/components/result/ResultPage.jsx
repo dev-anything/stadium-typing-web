@@ -13,7 +13,7 @@ function formatTime(resultTime) {
 
 const ResultPage = () => {
   const { state } = useLocation();
-  
+
   const {
     leagueUrl,
     leagueId,
@@ -28,7 +28,7 @@ const ResultPage = () => {
     return <Navigate to="/" replace />
   }
 
-
+  
   useEffect(() => {
     const saveResult = async () => {
       if (!state) return;
