@@ -3,8 +3,6 @@ import HeroCard from "./HeroCard";
 import { useState } from "react";
 import StartBtn from "./StartBtn";
 
-const heroWords = ["TYPE", "THE", "PITCH"];
-
 const routine = [
   {
     n: "01",
@@ -36,7 +34,7 @@ const Home = () => {
   return (
     <>
       <div className="pointer-events-none absolute left-1/2 top-[-15%] h-105 w-105 -translate-x-1/2 rounded-full bg-[#3CCB6F] opacity-[0.12] blur-[140px]" />
-      <HeroCard heroword={heroWords}/>
+      <HeroCard />
       <StartBtn onClick={() => setPopUp(!popUp)} />
       
       <LeagueBtnSelector isOpen={popUp} onClose={setPopUp} />

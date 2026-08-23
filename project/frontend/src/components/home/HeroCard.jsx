@@ -1,10 +1,11 @@
-const HeroCard = ({ heroword }) => {
+const HeroCard = () => {
   let letterIndex = 0;
+  const heroWords = ["TYPE", "THE", "PITCH"];
   
   return (
     <main className="px-6 pb-10">
         <div className="flip-stage flex flex-wrap items-end justify-center gap-x-3 gap-y-2">
-          {heroword.map((word, wi) => (
+          {heroWords.map((word, wi) => (
             <div key={wi} className="flex">
               {word.split("").map((char, ci) => {
                 const delay = letterIndex * 0.06;
