@@ -14,20 +14,16 @@ const Footer = () => {
   const logoIds = ["reactjs.svg", "vitejs.svg", "tailwindcss.svg"];
 
   useEffect(() => {
-    const fetchLogos = () => {
-      const urls = logoIds.map((id) => {
-        const { data } = supabase
-          .storage
-          .from("assets")
-          .getPublicUrl(`logos/${id}`);
-        
-          return data.publicUrl;
-      });
+    const urls = logoIds.map((id) => {
+      const { data } = supabase
+        .storage
+        .from("assets")
+        .getPublicUrl(`logos/${id}`);
+      
+        return data.publicUrl;
+    });
 
     setLogoList(urls);
-    }
-
-    fetchLogos();
   }, []);
 
 
