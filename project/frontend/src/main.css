@@ -15,16 +15,13 @@
   }
 
   .leaflet-tooltip {
-    @apply
-    rounded-full
-    border
-    border-[#3CCB6F33] bg-[#0B1F17]/85 px-2.5 py-1 text-[11px] font-mono text-[#F4F5F0] shadow-lg;
+    @apply border-none bg-transparent p-0 shadow-none;
   }
 
   .leaflet-tooltip::before {
     display: none;
   }
-  
+
 }
 
 @layer components {
@@ -132,6 +129,38 @@
       leading-none
       transition
       cursor-pointer
+  }
+
+  .stadium-tooltip {
+    @apply
+      flex
+      flex-col
+      items-center
+      gap-0.5
+      rounded-xl
+      border
+      border-[#3CCB6F40]
+      bg-[#0B1F17]/90
+      px-3
+      py-1.5
+      shadow-lg
+      backdrop-blur-sm;
+  }
+
+  .stadium-tooltip__label {
+    @apply
+      text-[8px]
+      font-semibold
+      tracking-[0.25em]
+      text-[#9CB0A6];
+  }
+
+  .stadium-tooltip__club {
+    @apply
+      text-[13px]
+      font-semibold
+      tracking-wide
+      text-[#3CCB6F];
   }
 
   .leaguebtnstyle {
