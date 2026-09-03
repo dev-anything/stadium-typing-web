@@ -103,16 +103,19 @@
 
   .popupstyle {
     @apply
-      fixed
-      border
-      top-1/2
-      left-1/2
-      -translate-x-1/2
-      -translate-y-1/2
-      rounded-xl
-      bg-[#0d2118]
-      p-5
-
+    fixed
+    border
+    top-1/2
+    left-1/2
+    -translate-x-1/2
+    -translate-y-1/2
+    flex
+    justify-center
+    rounded-xl
+    bg-[#0d2118]
+    p-5
+    w-[35%]
+    h-[40%]
   }
 
   .closebtnstyle {
