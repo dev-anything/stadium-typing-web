@@ -114,8 +114,8 @@
     rounded-xl
     bg-[#0d2118]
     p-5
-    w-[35%]
-    h-[40%]
+    /*w-[35%]*/
+    /*h-[40%]*/
   }
 
   .closebtnstyle {

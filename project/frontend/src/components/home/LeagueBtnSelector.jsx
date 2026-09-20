@@ -40,10 +40,8 @@ const LeagueBtnSelector = ({ isOpen, onClose }) => {
 
   return (
     <div className="popupstyle">
-      {isLoading ? (
-        <Loading />
-      ) : (
-        <div className="relative">
+
+        <div className="flex flex-col relative">
           <button
             className="closebtnstyle"
             onClick={() => onClose(false)}
@@ -53,22 +51,28 @@ const LeagueBtnSelector = ({ isOpen, onClose }) => {
           <h2 className="font-display text-center text-[30px] mb-5">
             Choose the league
           </h2>
-          <div className="grid grid-cols-3 gap-2.5 rounded-xl bg-[#0d2118]">
-            {leagues.map((league) => {
-              return (
-                <Link
-                  key={league.id}
-                  to={`/play/${league.league_code}`}
-                  className="font-display leaguebtnstyle text-center"
-                >
-                  {league.league_name}
-                </Link>
+          {isLoading ?
+            <Loading /> :
+            <div className="grid grid-cols-3 gap-2.5 rounded-xl bg-[#0d2118]">
+              {leagues.map((league) => {
+                  return (
+                    <Link
+                      key={league.id}
+                      to={`/play/${league.league_code}`}
+                      className="font-display leaguebtnstyle text-center"
+                    >
+                      {league.league_name}
+                    </Link>
 
-              );
-            })}
+                  );
+                })
+              }
           </div>
+          }
+
+          
         </div>
-      )}
+      {/*)}*/}
     </div>
   );
 }
