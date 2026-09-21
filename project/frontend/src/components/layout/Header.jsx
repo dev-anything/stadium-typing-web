@@ -23,13 +23,13 @@ const Header = () => {
       >
         STADIO TYPE
       </Link>
-      <a 
+      {/*<a 
         href="https://www.instagram.com/dev_anything_?igsh=dmg2dWhrZXNocGt1"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img className="w-8" src={logoUrl} />
-      </a>
+      </a>*/}
       {/*<span className="font-ibm-plex-mono text-[10px] tracking-widest text-[#5C6F65]">
         WORLD TOUR
       </span>*/}
